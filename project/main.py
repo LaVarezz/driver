@@ -63,6 +63,9 @@ class Game:
         self.events.unsubscribe(self, EventTypes.EXITGAMEEVENT)
         log_info('game finish: done')
 
+    def dev_process(self):
+        ''' сюды вводить код, который выполняется при старте в целях проверки и отладки '''
+        self.manager.widget_manager.create_widget(WidgetTypes.ButtonWidget.value((30, 30), (50, 50), 'nothing', CommandTypes.TestCommand), 0)
 
     def __repr__(self):
         return 'Main game object'

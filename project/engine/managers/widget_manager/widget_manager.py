@@ -40,6 +40,6 @@ class WidgetManager(Manager):
 
     def remove_widget(self, widget_id):
         for layer in self.layers:
-            for widget in self.layers[layer]:
+            for widget in self.layers[layer][:]:
                 if widget.id == widget_id:
                     self.layers[layer].remove(widget)

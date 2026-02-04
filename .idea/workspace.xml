@@ -4,42 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/driver.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/data/settings/game_settings/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/data/settings/game_settings/game_settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/data/settings/main_settings/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/data/settings/main_settings/open_settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/data/settings/settings_lib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/data/settings/state_settings/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/data/settings/state_settings/state_settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/events/event_bus.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/events/event_types.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/basic_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/data_manager/data_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/input_manager/imput_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/main_manager/main_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scene_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/MainScene/main_scene.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/scenes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/time_manager/time_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/time_manager/timer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widget_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/basic_widget.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/button.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/commands/cmds/test_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/commands/command_types.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/widget_types.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/window_manager/window_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/utills/logging/log.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/main.py" afterDir="false" />
+    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="Initial commit )000))">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +232,20 @@
       <option name="presentableId" value="Default" />
       <updated>1768302588485</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit )000))">
+      <option name="closed" value="true" />
+      <created>1770220041118</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1770220041118</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit )000))" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit )000))" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
