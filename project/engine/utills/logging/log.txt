@@ -1,0 +1,15 @@
+18:35:33 | INFO | game initialization: start
+18:35:33 | INFO | sub managers init: start
+18:35:33 | INFO | Window manager is being creating
+18:35:33 | INFO | Window manager has created
+18:35:33 | INFO | sub managers init: complete
+18:35:33 | INFO | sub managers setup: start
+18:35:33 | INFO | Window manager is on setup
+18:35:33 | INFO | Window manager setup if finish
+18:35:33 | INFO | scenes changing: start
+18:35:33 | INFO | scenes changing: finish
+18:35:33 | INFO | sub managers setup: complete
+18:35:33 | INFO | game initialization: finish
+18:35:34 | INFO | game finish: start
+18:35:34 | INFO | game finish: done
+18:35:34 | INFO | Bye!
