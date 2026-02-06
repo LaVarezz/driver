@@ -9,6 +9,8 @@ from project.engine.managers.widget_manager.widgets.widget_types import WidgetTy
 from project.engine.utills.logging.log import setup_logging, log_info
 
 
+
+
 class Game:
     ''' Основной класс игры, подгружает подсистемы '''
 

@@ -11,10 +11,7 @@ class Button(BasicWidget):
         self.command(data)
 
     def update(self):
-        data = {
-            'test': True
-        }
-        self(data) # для теста
+        pass
 
     def draw(self, window):
         if self.visible:

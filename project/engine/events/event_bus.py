@@ -6,7 +6,6 @@ class EventBus:
         ''' Управление событиями. Ключем в подписке является тип события, а значением - подписчик. '''
         self._current_events = []
         self._next_events = []
-
         self._subscribes = {}
 
     def subscribe(self, listener, event_type):

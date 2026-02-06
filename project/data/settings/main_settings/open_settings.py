@@ -31,3 +31,6 @@ class OpenSettings:
 
     def __getitem__(self, key):
         return self.__data[key]
+
+    def __iter__(self):
+        return self.__data

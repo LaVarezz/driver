@@ -4,8 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="Initial commit )000))">
+    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="Initial commit test">
+      <change afterPath="$PROJECT_DIR$/project/data/protocols/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/data/protocols/protocols.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/text_manager/text_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/text_manager/text_object.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/text_manager/word_object.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/data/settings/game_settings/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/settings/game_settings/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/data/settings/game_settings/game_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/settings/game_settings/game_settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/data/settings/main_settings/open_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/settings/main_settings/open_settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/data/settings/state_settings/state_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/settings/state_settings/state_settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/events/event_bus.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/events/event_bus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/basic_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/basic_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/input_manager/imput_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/input_manager/input_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/main_manager/main_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/main_manager/main_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,45 +73,25 @@
     "Python.main (2).executor": "Run",
     "Python.main.executor": "Run",
     "Python.main_settings.executor": "Run",
+    "Python.protocols.executor": "Run",
     "Python.settings_lib.executor": "Run",
+    "Python.text_manager.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/Galya/PycharmProjects/space_e",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Galya\PycharmProjects\driver\project\data" />
       <recent name="C:\Users\Galya\PycharmProjects\driver\project\engine\managers\scene_manager\scenes" />
       <recent name="C:\Users\Galya\PycharmProjects\driver\project\data\settings" />
       <recent name="C:\Users\Galya\PycharmProjects\driver\folder\engine\scene_engine\scenes" />
       <recent name="C:\Users\Galya\PycharmProjects\driver\folder\engine\scene_engine" />
-      <recent name="C:\Users\Galya\PycharmProjects\driver\folder\engine\data_engine\data\statistic_folders\sessin_stats" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main (2)">
-    <configuration name="event_bus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="driver" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project/engine/events" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/engine/events/event_bus.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.text_manager">
     <configuration name="log" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="driver" />
       <option name="ENV_FILES" value="" />
@@ -162,7 +158,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="open_settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="protocols" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="driver" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -171,11 +167,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project/data/settings/main_settings" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project/data/protocols" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Galya\PycharmProjects\driver\project\data\settings\main_settings\open_settings.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/data/protocols/protocols.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -206,13 +202,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="text_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="driver" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project/engine/managers/text_manager" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/engine/managers/text_manager/text_manager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.text_manager" />
         <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.protocols" />
         <item itemvalue="Python.log" />
         <item itemvalue="Python.settings_lib" />
-        <item itemvalue="Python.open_settings" />
-        <item itemvalue="Python.event_bus" />
       </list>
     </recent_temporary>
   </component>
@@ -240,12 +258,21 @@
       <option name="project" value="LOCAL" />
       <updated>1770220041118</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit test">
+      <option name="closed" value="true" />
+      <created>1770220622335</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1770220622335</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit )000))" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit )000))" />
+    <MESSAGE value="Initial commit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
