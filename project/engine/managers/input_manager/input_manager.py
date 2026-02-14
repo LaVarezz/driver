@@ -10,7 +10,7 @@ class InputManager(Manager):
     def setup(self, data):
         pass
 
-    def get_inputs(self):
+    def process_inputs(self):
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 data = {

@@ -1,8 +1,10 @@
 from pygame import init
 
+from project.data.protocols.protocols import MainLike
 from project.data.settings.settings_lib import SettingsLib
 from project.engine.events.event_bus import EventBus
 from project.engine.events.event_types import EventTypes
+from project.engine.managers.input_manager.cursor import Cursor
 from project.engine.managers.main_manager.main_manager import MainManager
 from project.engine.managers.widget_manager.widgets.buttons.commands.command_types import CommandTypes
 from project.engine.managers.widget_manager.widgets.widget_types import WidgetTypes
@@ -11,7 +13,7 @@ from project.engine.utills.logging.log import setup_logging, log_info
 
 
 
-class Game:
+class Game(MainLike):
     ''' Основной класс игры, подгружает подсистемы '''
 
     def __init__(self):
@@ -26,6 +28,7 @@ class Game:
 
         self.events.subscribe(self, EventTypes.EXITGAMEEVENT)
         self.settings = SettingsLib()
+        self.cursor = Cursor(self)
 
         self.manager.create_submanagers()
         self.manager.setup_submanagers()
@@ -42,12 +45,15 @@ class Game:
             ''' Выполнение очереди событий '''
             self.events.process_frame()
 
+            self.cursor.update_cursor_state()
+
             ''' сбор инпутов '''
-            self.manager.input_manager.get_inputs()
+            self.manager.input_manager.process_inputs()
 
             ''' Обновление менеджеров '''
             self.manager.scene_manager.current_scene.update()
             self.manager.widget_manager.update()
+
 
             ''' Отрисовка менеджеров '''
             self.manager.scene_manager.current_scene.draw()
@@ -67,7 +73,7 @@ class Game:
 
     def dev_process(self):
         ''' сюды вводить код, который выполняется при старте в целях проверки и отладки '''
-        self.manager.widget_manager.create_widget(WidgetTypes.ButtonWidget.value((30, 30), (50, 50), 'nothing', CommandTypes.TestCommand), 0)
+        self.manager.widget_manager.create_widget(WidgetTypes.ButtonWidget.value(self, (30, 30), (50, 50), 'nothing', CommandTypes.TestCommand), 0)
 
     def __repr__(self):
         return 'Main game object'

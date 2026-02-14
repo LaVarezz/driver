@@ -55,6 +55,22 @@ class EventBusLike(Protocol):
 
     def next_len(self) -> int: ...
 
+    def begin_frame(self): ...
+
+    def process_frame(self): ...
+
+    def current_events(self) -> list: ...
+
+    def next_events(self) -> list: ...
+
+    def try_to_get_event(self, event_type) -> list: ...
+
+class CursorLike(Protocol):
+    def update_cursor_state(self): ...
+
+    def check_matches(self): ...
+
+    def get_mouse_states(self) -> tuple: ...
 
 class WindowManagerLike(ManagerLike, HasSetup, HasTrigger, Protocol):
     app: Any  # из pygame
@@ -85,14 +101,21 @@ class WidgetManagerLike(ManagerLike, Protocol):
 
     def remove_widget(self, widget_id: int) -> None: ...
 
+    def get_widget(self, id, layer=-1) -> WidgetLike: ...
+
+
+
 class SettingsLike(Protocol):
     open_settings: dict
     state_settings: dict
     game_settings: dict
 
+
 class MainLike(Protocol):
-    main_manager: MainManagerLike
+    manager: MainManagerLike
     settings: SettingsLike
+    events: EventBusLike
+    cursor: CursorLike
 
 
 class MainManagerLike(ManagerLike, Protocol):
@@ -101,4 +124,3 @@ class MainManagerLike(ManagerLike, Protocol):
     scene_manager: SceneManagerLike
     time_manager: TimeManagerLike
     widget_manager: WidgetManagerLike
-

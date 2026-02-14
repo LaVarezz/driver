@@ -40,6 +40,16 @@ class EventBus:
                     listener.trigger(event[0], event[1])
         self._current_events = []
 
+    def current_events(self):
+        return self._current_events
+
+    def next_events(self):
+        return self._next_events
+
+    def try_to_get_event(self, event_type):
+        return [event for event in self._next_events if event[0] == event_type]
+
+
     def current_len(self):
         return len(self._current_events)
 

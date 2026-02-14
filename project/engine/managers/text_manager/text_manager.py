@@ -1,20 +1,25 @@
-
-from project.engine.managers.basic_manager import Manager
 import pygame as pg
 
+import project.data.protocols.protocols as protocols
+from project.engine.managers.basic_manager import Manager
 from project.engine.managers.text_manager.text_object import TextObject
 
-import project.data.protocols.protocols as protocols
 
 class TextManager(Manager, protocols.ManagerLike):
+    '''
+    Создает, управляет и удаляет блоки текста.
+    из функций:
+    - кеширование текста
+    - центрирование текстового блока
+    '''
     def __init__(self, main: protocols.MainLike):
         super().__init__()
         self._fonts = {}
         self._objects = []
         self._sizes = []
 
-
-    def setup(self, data: protocols.SettingsLike):
+    def setup(self, data: protocols.SettingsLike) -> None:
+        ''' кеширует алфавит в словари '''
         alp = '1234567890-=*qwertyuiopasdfghjklzxcvbnmйцукенгшщзхъфывапролджэячсмитьбю.,_ QWERTYUIOPASDFGHJKLZXCVBNMЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ'
         for size in data.game_settings['text_sizes']:
             d = {}
@@ -25,7 +30,8 @@ class TextManager(Manager, protocols.ManagerLike):
             self._fonts[size] = d
             self._sizes.append(size)
 
-    def create_text_object(self, cords, length, text:str, size_index:int, outpost=10, delta=1, center=(0, 0)):
+    def create_text_object(self, cords: tuple, length: tuple, text: str, size_index: int, outpost=10, delta=1, center=(0, 0)):
+        ''' создает блок текста. дальнейшая логика внутри text_object '''
         real_size = self._sizes[size_index]
         self._objects.append(TextObject(cords, length, text, self._fonts[real_size], real_size, outpost, delta, center))
 
@@ -37,29 +43,37 @@ class TextManager(Manager, protocols.ManagerLike):
         for obj in self._objects:
             obj.draw(window)
 
-test = True
+
+test = False
 if test:
+    ''' небольшей тест на работоспособность '''
 
     pg.init()
 
     window = pg.display.set_mode((500, 300))
+
 
     class set:
         def __init__(self):
             self.game_settings = {
                 "text_sizes": [12, 18, 24, 30, 60]
             }
+
+
     class main(protocols.MainLike):
         def __init__(self):
             self.settings = set()
 
+
     main = main()
     tm = TextManager(main)
     tm.setup(main.settings)
-    tm.create_text_object((30, 50), (300, 50), '111 222 333 444 555 666 777 888 999', 3, 10)
+    tm.create_text_object((30, 50), (300, 150), '111 222 333 444 555 666 777 888 999', 3, 10, center=(0, 0))
 
     run = True
     while run:
+        window.fill('blue')
+
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 run = False
@@ -67,7 +81,3 @@ if test:
         tm.draw_text_objects(window)
 
         pg.display.update()
-
-
-
-

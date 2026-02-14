@@ -1,4 +1,5 @@
 from project.data.protocols.protocols import MainManagerLike
+from project.engine.managers.input_manager.cursor import Cursor
 from project.engine.managers.input_manager.input_manager import InputManager
 from project.engine.managers.scene_manager.scene_manager import SceneManager
 from project.engine.managers.text_manager.text_manager import TextManager

@@ -1,15 +1,12 @@
-15:17:57 | INFO | game initialization: start
-15:17:57 | INFO | sub managers init: start
-15:17:57 | INFO | Window manager is being creating
-15:17:57 | INFO | Window manager has created
-15:17:57 | INFO | sub managers init: complete
-15:17:57 | INFO | sub managers setup: start
-15:17:57 | INFO | Window manager is on setup
-15:17:57 | INFO | Window manager setup if finish
-15:17:57 | INFO | scenes changing: start
-15:17:57 | INFO | scenes changing: finish
-15:17:57 | INFO | sub managers setup: complete
-15:17:57 | INFO | game initialization: finish
-15:18:01 | INFO | game finish: start
-15:18:01 | INFO | game finish: done
-15:18:01 | INFO | Bye!
+11:26:34 | INFO | game initialization: start
+11:26:34 | INFO | sub managers init: start
+11:26:34 | INFO | Window manager is being creating
+11:26:34 | INFO | Window manager has created
+11:26:34 | INFO | sub managers init: complete
+11:26:34 | INFO | sub managers setup: start
+11:26:34 | INFO | Window manager is on setup
+11:26:34 | INFO | Window manager setup if finish
+11:26:34 | INFO | scenes changing: start
+11:26:34 | INFO | scenes changing: finish
+11:26:34 | INFO | sub managers setup: complete
+11:26:34 | INFO | game initialization: finish

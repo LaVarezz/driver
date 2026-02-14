@@ -25,7 +25,7 @@ class WindowManager(Manager):
         self.time = 0
 
         d = {}
-        self.main.manager.time_manager.create_timer(self.time, 1, EventTypes.TIMERSHUTDOWN, d, True)
+        self.main.manager.time_manager.create_timer(self.time, 5, EventTypes.TIMERSHUTDOWN, d, True)
         self.main.events.subscribe(self, EventTypes.TIMERSHUTDOWN)
         log_info('Window manager setup if finish')
 
