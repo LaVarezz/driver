@@ -1,5 +1,3 @@
-from fileinput import hook_encoded
-from idlelib.macosx import hideTkConsole
 
 from project.data.protocols.protocols import MainLike
 from project.engine.events.event_types import EventTypes
@@ -35,6 +33,7 @@ class WidgetManager(Manager):
         self.captured_id = None
 
         self.main.events.subscribe(self, EventTypes.BUTTONCHANGE)
+        self.main.events.subscribe(self, EventTypes.SCENEOBJECTSCREATED)
 
     def update(self):
         ''' если нужно будет оптимизировать, то я буду держать список с пуллом и после каждого изменения состава виджетов этот список пересобирать '''
@@ -52,12 +51,6 @@ class WidgetManager(Manager):
             for widget in layer.values():
                 widget.draw(window)
 
-    def check_id(self, id):
-        ks = []
-        for keys_lists in self.layers.values():
-            for kys in keys_lists.keys():
-                ks.append(kys)
-        return id in ks
 
     def get_widget(self, id, layer=-1):
         if layer >= 0:
@@ -66,12 +59,16 @@ class WidgetManager(Manager):
             if id in de_layer.keys():
                 return de_layer[id]
 
-    def create_widget(self, widget, layer):
-        if not self.check_id(widget.id):
-            self.layers[layer][widget.id] = widget
-        else:
-            widget.create_id()
-            self.create_widget(widget, layer)
+    def get_all_widgets(self):
+        d = []
+        for layer in self.layers.values():
+            for wid in layer.values():
+                d.append(wid)
+        return d
+
+
+    def create_widget(self, widget):
+        self.layers[widget.layer][widget.id] = widget
 
     def remove_widget(self, widget_id):
         for layer in self.layers:
@@ -80,7 +77,9 @@ class WidgetManager(Manager):
                     del self.layers[layer][id]
                     # при ошибочном вызове создаст исключение
 
+
     def UI_run(self):
+        ''' Switch hovered button's id '''
         CG = False  # click given
         px, py, rel = self.main.cursor.get_mouse_states()
         for layer in [self.layers[i] for i in range(self.layers_int, -1, -1)]:
@@ -95,6 +94,7 @@ class WidgetManager(Manager):
 
     def trigger(self, msg, data):
         if msg == EventTypes.BUTTONCHANGE:
+            ''' изменяет выбранную и наведенную кнопку '''
             but = data['buttons']
             if (0, 1) in but:
                 self.captured_id = self.hovered_id
@@ -102,4 +102,14 @@ class WidgetManager(Manager):
                 if self.captured_id and self.captured_id == self.hovered_id:
                     self.get_widget(self.captured_id).process()
                 self.captured_id = None
+
+        if msg == EventTypes.SCENEOBJECTSCREATED:
+            for wid in data["widgets"]:
+                self.create_widget(wid)
+                print()
+
+
+    def __repr__(self):
+        return 'widget_manager'
+
 

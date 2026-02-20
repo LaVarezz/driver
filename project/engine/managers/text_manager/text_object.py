@@ -1,20 +1,24 @@
-from pygame import Surface, Rect
+from pygame import Surface, Rect, SRCALPHA
 
 from project.engine.managers.text_manager.word_object import WordObject
 
 
+
+
 class TextObject:
-    def __init__(self, cords, length, text, font, size, outpost=10, delta=1, center=(0, 0)):
+    def __init__(self, cords, length, text, window, font, size, outpost=10, delta=1, center=(0, 0)):
         self.text = text
         self.font = font
         self.size = size
         self.x, self.y = cords
         self.lx, self.ly = length
         self.cx, self.cy = self.x, self.y
+        self.window = window
 
         self.lines = []
 
-        self.surface = Surface((self.lx, self.ly))
+        self.surface = Surface((self.lx, self.ly), SRCALPHA)
+        self.surface.set_colorkey('black')
         self.rect = Rect(self.x, self.y, self.lx, self.ly)
 
         self.delta = delta
@@ -32,7 +36,7 @@ class TextObject:
         self.layout()
 
     def wrap(self, unsorted):
-        ''' КОЛЯН НЕ ДАЙ БОГ ТЫ ЭТО СУКА ВЫЗОВЕШЬ ВТОРОЙ РАЗ ВСЯ РАЗМЕТКА ПОЛЕТИТ НАХУЙ
+        '''
         Разбивает слова на линии в соответствии с размерами этих слов.
         '''
         length = 0
@@ -98,10 +102,11 @@ class TextObject:
     def update(self):
         pass
 
-    def draw(self, window):
+    def draw(self):
         self.surface.fill('red')
         for line in self.lines:
             for word in line:
                 word.draw(self.surface)
-        window.blit(self.surface, self.rect)
+        self.window.blit(self.surface, self.rect)
+
 

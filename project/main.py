@@ -1,3 +1,5 @@
+from sqlite3.dbapi2 import paramstyle
+
 from pygame import init
 
 from project.data.protocols.protocols import MainLike
@@ -6,10 +8,7 @@ from project.engine.events.event_bus import EventBus
 from project.engine.events.event_types import EventTypes
 from project.engine.managers.input_manager.cursor import Cursor
 from project.engine.managers.main_manager.main_manager import MainManager
-from project.engine.managers.widget_manager.widgets.buttons.commands.command_types import CommandTypes
-from project.engine.managers.widget_manager.widgets.widget_types import WidgetTypes
 from project.engine.utills.logging.log import setup_logging, log_info
-
 
 
 
@@ -27,6 +26,8 @@ class Game(MainLike):
         self.events = EventBus()
 
         self.events.subscribe(self, EventTypes.EXITGAMEEVENT)
+        self.events.subscribe(self, EventTypes.CHANGEFLAG)
+        self.events.subscribe(self, EventTypes.ACTIVATEFUNCTION)
         self.settings = SettingsLib()
         self.cursor = Cursor(self)
 
@@ -53,30 +54,48 @@ class Game(MainLike):
             ''' Обновление менеджеров '''
             self.manager.scene_manager.current_scene.update()
             self.manager.widget_manager.update()
+            self.manager.text_manager.update_text_objects()
 
 
             ''' Отрисовка менеджеров '''
             self.manager.scene_manager.current_scene.draw()
             self.manager.widget_manager.draw(self.manager.window_manager.app)
+            self.manager.text_manager.draw_text_objects()
 
             ''' обновление экрана '''
             self.manager.window_manager.update_window()
 
+
     def trigger(self, msg, data):
         if msg == EventTypes.EXITGAMEEVENT:
             self.run = data['run']
+            self.manager.engine_manager.save_config_to_json()
+        elif msg == EventTypes.CHANGEFLAG:
+            parameter = self
+            for next_par in data[:-1]:
+                parameter = getattr(parameter, next_par)
+            val = getattr(parameter, data[-1])
+            setattr(parameter, data[-1], False if val else True)
+        elif msg == EventTypes.ACTIVATEFUNCTION:
+            func = self
+            for next_par in data:
+                func = getattr(func, next_par)
+            func()
+
 
     def shutdown(self):
         log_info('game finish: start')
         self.events.unsubscribe(self, EventTypes.EXITGAMEEVENT)
         log_info('game finish: done')
 
+
     def dev_process(self):
         ''' сюды вводить код, который выполняется при старте в целях проверки и отладки '''
-        self.manager.widget_manager.create_widget(WidgetTypes.ButtonWidget.value(self, (30, 30), (50, 50), 'nothing', CommandTypes.TestCommand), 0)
+        pass
 
     def __repr__(self):
         return 'Main game object'
+
 
 
 if __name__ == '__main__':
@@ -84,4 +103,3 @@ if __name__ == '__main__':
     game.dev_process()
     game.mainloop()
     game.shutdown()
-    log_info('Bye!')

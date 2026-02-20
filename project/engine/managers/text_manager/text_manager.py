@@ -12,6 +12,7 @@ class TextManager(Manager, protocols.ManagerLike):
     - кеширование текста
     - центрирование текстового блока
     '''
+
     def __init__(self, main: protocols.MainLike):
         super().__init__()
         self._fonts = {}
@@ -30,18 +31,20 @@ class TextManager(Manager, protocols.ManagerLike):
             self._fonts[size] = d
             self._sizes.append(size)
 
-    def create_text_object(self, cords: tuple, length: tuple, text: str, size_index: int, outpost=10, delta=1, center=(0, 0)):
+    def create_text_object(self, cords: tuple, length: tuple, window, text: str, size_index: int, outpost=10, delta=1,
+                           center=(0, 0)):
         ''' создает блок текста. дальнейшая логика внутри text_object '''
         real_size = self._sizes[size_index]
-        self._objects.append(TextObject(cords, length, text, self._fonts[real_size], real_size, outpost, delta, center))
+        self._objects.append(
+            TextObject(cords, length, text, window, self._fonts[real_size], real_size, outpost, delta, center))
 
     def update_text_objects(self):
         for obj in self._objects:
             obj.update()
 
-    def draw_text_objects(self, window):
+    def draw_text_objects(self):
         for obj in self._objects:
-            obj.draw(window)
+            obj.draw()
 
 
 test = False
@@ -68,7 +71,7 @@ if test:
     main = main()
     tm = TextManager(main)
     tm.setup(main.settings)
-    tm.create_text_object((30, 50), (300, 150), '111 222 333 444 555 666 777 888 999', 3, 10, center=(0, 0))
+    tm.create_text_object((30, 50), (300, 150), window, '111 222 333 444 555 666 777 888 999', 3, 10, center=(0, 0))
 
     run = True
     while run:
@@ -78,6 +81,6 @@ if test:
             if event.type == pg.QUIT:
                 run = False
         tm.update_text_objects()
-        tm.draw_text_objects(window)
+        tm.draw_text_objects()
 
         pg.display.update()

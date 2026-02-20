@@ -30,6 +30,7 @@ class EventBus:
     def emit(self, msg, data):
         self._next_events.append((msg, data))
 
+
     def begin_frame(self):
         self._current_events, self._next_events = self._next_events, []
 
@@ -49,12 +50,12 @@ class EventBus:
     def try_to_get_event(self, event_type):
         return [event for event in self._next_events if event[0] == event_type]
 
-
     def current_len(self):
         return len(self._current_events)
 
     def next_len(self):
         return len(self._next_events)
+
 
 
 auto_test = False

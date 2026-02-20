@@ -37,7 +37,7 @@ class WidgetLike(Protocol):
     surface: Any
     visible: bool
     enabled: bool
-    widget_id = int
+    id = int
 
     def update(self): ...
 
@@ -78,6 +78,7 @@ class WindowManagerLike(ManagerLike, HasSetup, HasTrigger, Protocol):
     dt: float
     run: bool
 
+
     def update_window(self) -> None: ...
 
 
@@ -97,11 +98,46 @@ class TimeManagerLike(ManagerLike, Protocol):
 
 
 class WidgetManagerLike(ManagerLike, Protocol):
+    captured_id: int
+    hovered_id: int
+
     def create_widget(self, widget: WidgetLike, layer: int) -> None: ...
 
     def remove_widget(self, widget_id: int) -> None: ...
 
     def get_widget(self, id, layer=-1) -> WidgetLike: ...
+
+    def get_all_widgets(self) -> list: ...
+
+
+class TextManagerLike(ManagerLike, Protocol):
+    def create_text_object(self, cords: tuple, length: tuple, window, text: str, size_index: int, outpost=10, delta=1,
+                           center=(0, 0)): ...
+import json
+import os
+
+
+from project.engine.managers.basic_manager import Manager
+
+
+def load_json(path):
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def create_path():
+    p = os.path.join(os.path.dirname(__file__), 'config.json')
+    abs = os.path.abspath(p)
+    return abs
+
+
+class EngineManagerLike(Manager):
+    able_to_change: bool
+    def setup(self, settings: SettingsLike): ...
+
+    def get_config_for_scene(self): ...
+
+    def save_config_for_scene(self): ...
 
 
 
@@ -124,3 +160,5 @@ class MainManagerLike(ManagerLike, Protocol):
     scene_manager: SceneManagerLike
     time_manager: TimeManagerLike
     widget_manager: WidgetManagerLike
+    text_manager: TextManagerLike
+    engine_manager: EngineManagerLike

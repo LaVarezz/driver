@@ -4,21 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.1 версия&#10;- добавлены протоколы:&#10;-- автофилл для уже созданных классов&#10;- добавлен менеджер текста:&#10;-- кеширует шрифты, создает и отрисовывает текстовые объекты&#10;- немного красоты&#10;- добавлен один лысый черт в соавторы">
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/input_manager/cursor.py" afterDir="false" />
+    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.3 &#10;- текст теперь выводится на кастомную поверхность&#10;-">
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/engine_manager/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/engine_manager/engine_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/EngineScene/EngineScene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/commands/cmds/activate_function.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/commands/cmds/set_flag.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/data/protocols/protocols.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/protocols/protocols.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/data/settings/main_settings/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/settings/open_settings/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/data/settings/main_settings/open_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/settings/open_settings/open_settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/data/settings/settings_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/settings/settings_lib.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/events/event_bus.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/events/event_bus.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/events/event_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/events/event_types.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/input_manager/input_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/input_manager/input_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/main_manager/main_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/main_manager/main_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scene_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scene_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/MainScene/main_scene.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/MainScene/main_scene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/scenes.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/scenes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/text_manager/text_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/text_manager/text_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/text_manager/text_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/text_manager/text_object.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/text_manager/word_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/text_manager/word_object.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widget_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widget_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/basic_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/basic_widget.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/button.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/commands/cmds/test_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/commands/cmds/test_command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/commands/command_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/commands/command_types.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/window_manager/window_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/window_manager/window_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/main.py" afterDir="false" />
@@ -63,34 +72,37 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.cursor.executor": "Run",
-    "Python.engine_scene.executor": "Run",
-    "Python.event_bus.executor": "Run",
-    "Python.log.executor": "Run",
-    "Python.main (1).executor": "Run",
-    "Python.main (2).executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.main_settings.executor": "Run",
-    "Python.protocols.executor": "Run",
-    "Python.settings_lib.executor": "Run",
-    "Python.text_manager.executor": "Run",
-    "Python.widget_manager.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Galya/PycharmProjects/space_e",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.cursor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.engine_scene.executor&quot;: &quot;Run&quot;,
+    &quot;Python.event_bus.executor&quot;: &quot;Run&quot;,
+    &quot;Python.log.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_settings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.protocols.executor&quot;: &quot;Run&quot;,
+    &quot;Python.settings_lib.executor&quot;: &quot;Run&quot;,
+    &quot;Python.text_manager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.text_object.executor&quot;: &quot;Run&quot;,
+    &quot;Python.widget_manager.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Galya/PycharmProjects/space_e&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Galya\PycharmProjects\driver\project\engine\managers" />
       <recent name="C:\Users\Galya\PycharmProjects\driver\project\data" />
       <recent name="C:\Users\Galya\PycharmProjects\driver\project\engine\managers\scene_manager\scenes" />
       <recent name="C:\Users\Galya\PycharmProjects\driver\project\data\settings" />
       <recent name="C:\Users\Galya\PycharmProjects\driver\folder\engine\scene_engine\scenes" />
-      <recent name="C:\Users\Galya\PycharmProjects\driver\folder\engine\scene_engine" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main (2)">
@@ -108,28 +120,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/engine/managers/input_manager/cursor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="event_bus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="driver" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project/engine/events" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/engine/events/event_bus.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -204,6 +194,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="text_object" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="driver" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project/engine/managers/text_manager" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/engine/managers/text_manager/text_object.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="widget_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="driver" />
       <option name="ENV_FILES" value="" />
@@ -229,10 +241,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.text_manager" />
+        <item itemvalue="Python.text_object" />
         <item itemvalue="Python.widget_manager" />
         <item itemvalue="Python.cursor" />
-        <item itemvalue="Python.event_bus" />
-        <item itemvalue="Python.text_manager" />
       </list>
     </recent_temporary>
   </component>
@@ -276,17 +288,33 @@
       <option name="project" value="LOCAL" />
       <updated>1770393613218</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="0.0.2 версия&#10;- Определяются нажатые, наведенные и отжатые виджеты. Добавлены события для таковых.">
+      <option name="closed" value="true" />
+      <created>1771057737237</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1771057737237</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit )000))" />
     <MESSAGE value="Initial commit test" />
     <MESSAGE value="0.0.1 версия&#10;- добавлены протоколы:&#10;-- автофилл для уже созданных классов&#10;- добавлен менеджер текста:&#10;-- кеширует шрифты, создает и отрисовывает текстовые объекты&#10;- немного красоты&#10;- добавлен один лысый черт в соавторы" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.1 версия&#10;- добавлены протоколы:&#10;-- автофилл для уже созданных классов&#10;- добавлен менеджер текста:&#10;-- кеширует шрифты, создает и отрисовывает текстовые объекты&#10;- немного красоты&#10;- добавлен один лысый черт в соавторы" />
+    <MESSAGE value="0.0.2 версия&#10;- Определяются нажатые, наведенные и отжатые виджеты. Добавлены события для таковых." />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.2 версия&#10;- Определяются нажатые, наведенные и отжатые виджеты. Добавлены события для таковых." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/main.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

@@ -1,5 +1,4 @@
-from project.data.protocols.protocols import MainManagerLike
-from project.engine.managers.input_manager.cursor import Cursor
+from project.engine.managers.engine_manager.engine_manager import EngineManager
 from project.engine.managers.input_manager.input_manager import InputManager
 from project.engine.managers.scene_manager.scene_manager import SceneManager
 from project.engine.managers.text_manager.text_manager import TextManager
@@ -20,6 +19,7 @@ class MainManager():
         self.time_manager = TimeManager(self.main)
         self.widget_manager = WidgetManager(self.main)
         self.text_manager = TextManager(self.main)
+        self.engine_manager = EngineManager(self.main)
         log_info('sub managers init: complete')
 
 
@@ -29,5 +29,8 @@ class MainManager():
         self.input_manager.setup(self.main.settings)
         self.scene_manager.setup(self.main.settings)
         self.text_manager.setup(self.main.settings)
+        self.engine_manager.setup(self.main.settings)
         log_info('sub managers setup: complete')
 
+    def __repr__(self):
+        return 'main_manager'

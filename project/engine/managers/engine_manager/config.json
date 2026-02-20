@@ -1,0 +1,98 @@
+{
+    "main_scene": {
+        "widgets": {
+            "buttons": {
+                "00001": {
+                    "position": [
+                        430,
+                        30
+                    ],
+                    "size": [
+                        150,
+                        30
+                    ],
+                    "text": "set_change",
+                    "command": {
+                        "action": "set_flag",
+                        "data": [
+                            "manager",
+                            "engine_manager",
+                            "able_to_change"
+                        ]
+                    },
+                    "layer": 0,
+                    "moveable": false
+                }
+            }
+        }
+    },
+    "engine_scene": {
+        "widgets": {
+            "buttons": {
+                "00001": {
+                    "position": [
+                        430,
+                        30
+                    ],
+                    "size": [
+                        150,
+                        30
+                    ],
+                    "text": "set_change",
+                    "command": {
+                        "action": "set_flag",
+                        "data": [
+                            "manager",
+                            "engine_manager",
+                            "able_to_change"
+                        ]
+                    },
+                    "layer": 0,
+                    "moveable": false
+                },
+                "00002": {
+                    "position": [
+                        430,
+                        130
+                    ],
+                    "size": [
+                        150,
+                        30
+                    ],
+                    "text": "Save to json",
+                    "command": {
+                        "action": "activate_function",
+                        "data": [
+                            "manager",
+                            "engine_manager",
+                            "save_config_to_json"
+                        ]
+                    },
+                    "layer": 0,
+                    "moveable": false
+                },
+                "00003": {
+                    "position": [
+                        119,
+                        306
+                    ],
+                    "size": [
+                        150,
+                        30
+                    ],
+                    "text": "test",
+                    "command": {
+                        "action": "test_command",
+                        "data": [
+                            "manager",
+                            "engine_manager",
+                            "able_to_change"
+                        ]
+                    },
+                    "layer": 0,
+                    "moveable": true
+                }
+            }
+        }
+    }
+}
