@@ -103,7 +103,6 @@ class TextObject:
         pass
 
     def draw(self):
-        self.surface.fill('red')
         for line in self.lines:
             for word in line:
                 word.draw(self.surface)

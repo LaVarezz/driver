@@ -38,6 +38,7 @@ class WidgetLike(Protocol):
     visible: bool
     enabled: bool
     id = int
+    panel: Any
 
     def update(self): ...
 
@@ -64,6 +65,9 @@ class EventBusLike(Protocol):
     def next_events(self) -> list: ...
 
     def try_to_get_event(self, event_type) -> list: ...
+
+    def fast_emit(self, SCENEOBJECTSCREATED, d): ...
+
 
 class CursorLike(Protocol):
     def update_cursor_state(self): ...

@@ -3,14 +3,14 @@ from project.engine.managers.widget_manager.widgets.basic_widget import BasicWid
 
 
 class Button(BasicWidget):
-    def __init__(self, main: MainLike, cords, size, id, text, command, layer, moveable=False, visible=True, enabled=True):
-        super().__init__(main, cords, size, id, moveable, visible, enabled)
+    def __init__(self, main: MainLike, cords, size, id, text, command, layer, panel, moveable=False, visible=True, enabled=True, anchor=None,
+                 offset=(0, 0)):
+        super().__init__(main, cords, size, id, layer, panel, anchor, offset, moveable, visible, enabled)
         self.main = main
         self.command = command[0]
         self.data = command[1]
         self.command_raw = command[2]
         self.text = text
-        self.layer = layer
         self.type = 'button'
         self.main.manager.text_manager.create_text_object((0, 0), (self.width, self.height), self.surface, self.text, 1,
                                                           center=(1, 1))
@@ -18,10 +18,12 @@ class Button(BasicWidget):
     def __call__(self):
         self.command(self.main, self.data)
 
+
     def update(self):
         pass
 
     def draw(self, window):
+
         if self.visible:
             window.blit(self.surface, self.rect)
 
@@ -37,8 +39,13 @@ class Button(BasicWidget):
                 "action": self.command_raw,
                 "data": self.data
             },
+            "panel": self.panel,
             "layer": self.layer,
             "moveable": self.moveable,
+            "visible": self.visible,
+            "enabled": self.enabled,
+            "anchor": self.anchor,
+            "offset": self.offset
         }
         return d
 

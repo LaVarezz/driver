@@ -1,27 +1,27 @@
 {
     "main_scene": {
         "widgets": {
-            "buttons": {
+            "buttons": {},
+            "panels": {
                 "00001": {
                     "position": [
-                        430,
-                        30
+                        159,
+                        124
                     ],
                     "size": [
-                        150,
-                        30
+                        300,
+                        100
                     ],
-                    "text": "set_change",
-                    "command": {
-                        "action": "set_flag",
-                        "data": [
-                            "manager",
-                            "engine_manager",
-                            "able_to_change"
-                        ]
-                    },
-                    "layer": 0,
-                    "moveable": false
+                    "layer": 3,
+                    "panel": null,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "",
+                    "offset": [
+                        0,
+                        0
+                    ]
                 }
             }
         }
@@ -29,58 +29,16 @@
     "engine_scene": {
         "widgets": {
             "buttons": {
-                "00001": {
+                "00002": {
                     "position": [
-                        430,
-                        30
+                        86,
+                        28
                     ],
                     "size": [
                         150,
                         30
                     ],
                     "text": "set_change",
-                    "command": {
-                        "action": "set_flag",
-                        "data": [
-                            "manager",
-                            "engine_manager",
-                            "able_to_change"
-                        ]
-                    },
-                    "layer": 0,
-                    "moveable": false
-                },
-                "00002": {
-                    "position": [
-                        430,
-                        130
-                    ],
-                    "size": [
-                        150,
-                        30
-                    ],
-                    "text": "Save to json",
-                    "command": {
-                        "action": "activate_function",
-                        "data": [
-                            "manager",
-                            "engine_manager",
-                            "save_config_to_json"
-                        ]
-                    },
-                    "layer": 0,
-                    "moveable": false
-                },
-                "00003": {
-                    "position": [
-                        119,
-                        306
-                    ],
-                    "size": [
-                        150,
-                        30
-                    ],
-                    "text": "test",
                     "command": {
                         "action": "test_command",
                         "data": [
@@ -89,8 +47,38 @@
                             "able_to_change"
                         ]
                     },
+                    "panel": "00001",
                     "layer": 0,
-                    "moveable": true
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "",
+                    "offset": [
+                        10,
+                        20
+                    ]
+                }
+            },
+            "panels": {
+                "00001": {
+                    "position": [
+                        159,
+                        124
+                    ],
+                    "size": [
+                        300,
+                        100
+                    ],
+                    "layer": 3,
+                    "panel": null,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "",
+                    "offset": [
+                        0,
+                        0
+                    ]
                 }
             }
         }

@@ -1,14 +1,17 @@
-12:33:22 | INFO | game initialization: start
-12:33:22 | INFO | sub managers init: start
-12:33:22 | INFO | Window manager is being creating
-12:33:22 | INFO | Window manager has created
-12:33:22 | INFO | sub managers init: complete
-12:33:22 | INFO | sub managers setup: start
-12:33:22 | INFO | Window manager is on setup
-12:33:22 | INFO | Window manager setup if finish
-12:33:22 | INFO | scenes changing: start
-12:33:22 | INFO | scenes changing: finish
-12:33:22 | INFO | sub managers setup: complete
-12:33:22 | INFO | game initialization: finish
-12:33:25 | INFO | creating interface json file: start
-12:33:25 | INFO | creating interface json file: finish
+11:34:10 | INFO | game initialization: start
+11:34:10 | INFO | sub managers init: start
+11:34:10 | INFO | Window manager is being creating
+11:34:10 | INFO | Window manager has created
+11:34:10 | INFO | sub managers init: complete
+11:34:10 | INFO | sub managers setup: start
+11:34:10 | INFO | Window manager is on setup
+11:34:10 | INFO | Window manager setup if finish
+11:34:10 | INFO | scenes changing: start
+11:34:10 | INFO | scenes changing: finish
+11:34:10 | INFO | sub managers setup: complete
+11:34:10 | INFO | game initialization: finish
+11:34:31 | INFO | creating json file: start
+11:34:31 | INFO | creating json file: finish
+11:34:31 | INFO | interface has saved
+11:34:31 | INFO | game finish: start
+11:34:31 | INFO | game finish: done

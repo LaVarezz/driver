@@ -14,6 +14,9 @@ class EngineScene:
             if self.main.manager.widget_manager.hovered_id and self.main.manager.widget_manager.hovered_id == self.main.manager.widget_manager.captured_id:
                 widget = self.main.manager.widget_manager.get_widget(self.main.manager.widget_manager.hovered_id)
                 dx, dy = self.main.cursor.get_mouse_states()[2]
+                if widget.x + dx >= 0:
+                    if widget.x + dx + widget.width < self.main.manager.widget_manager.get_widget(widget.panel).width:
+
                 widget.replace(dx, dy)
 
 

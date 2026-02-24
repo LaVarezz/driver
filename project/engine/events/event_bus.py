@@ -30,6 +30,10 @@ class EventBus:
     def emit(self, msg, data):
         self._next_events.append((msg, data))
 
+    def fast_emit(self, msg, data):
+        if msg in self._subscribes.keys():
+            for listener in self._subscribes[msg][:]:
+                listener.trigger(msg, data)
 
     def begin_frame(self):
         self._current_events, self._next_events = self._next_events, []

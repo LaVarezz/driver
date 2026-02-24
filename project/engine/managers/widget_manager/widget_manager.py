@@ -1,4 +1,3 @@
-
 from project.data.protocols.protocols import MainLike
 from project.engine.events.event_types import EventTypes
 from project.engine.managers.basic_manager import Manager
@@ -40,24 +39,25 @@ class WidgetManager(Manager):
         self.UI_run()
         if self.captured_id:
             widget = self.get_widget(self.captured_id)
-            widget.surface.fill('blue')
-
         for layer in self.layers.values():
-            for widget in layer.values():
-                widget.update()
+            for panel in layer.values():
+                panel.update()
+
 
     def draw(self, window):
         for layer in self.layers.values():
-            for widget in layer.values():
-                widget.draw(window)
-
+            for panel in layer.values():
+                panel.draw(window)
 
     def get_widget(self, id, layer=-1):
         if layer >= 0:
             return self.layers[layer][id]
         for de_layer in self.layers.values():
-            if id in de_layer.keys():
-                return de_layer[id]
+            for panel in de_layer.values():
+                if id == panel.id:
+                    return panel
+                if id in panel.id_list:
+                    return panel.id_list[id]
 
     def get_all_widgets(self):
         d = []
@@ -66,9 +66,11 @@ class WidgetManager(Manager):
                 d.append(wid)
         return d
 
-
     def create_widget(self, widget):
-        self.layers[widget.layer][widget.id] = widget
+        if widget.type == 'panel':
+            self.layers[widget.layer][widget.id] = widget
+        else:
+            self.get_widget(widget.panel).add_widget(widget)
 
     def remove_widget(self, widget_id):
         for layer in self.layers:
@@ -77,16 +79,17 @@ class WidgetManager(Manager):
                     del self.layers[layer][id]
                     # при ошибочном вызове создаст исключение
 
-
     def UI_run(self):
         ''' Switch hovered button's id '''
         CG = False  # click given
         px, py, rel = self.main.cursor.get_mouse_states()
         for layer in [self.layers[i] for i in range(self.layers_int, -1, -1)]:
             for widget in layer.values():
-                if widget.check_collide(px, py):
-                    CG = widget
-                    self.hovered_id = widget.id
+
+                hovered_widget = widget.check_collide(px, py)
+                if hovered_widget:
+                    CG = hovered_widget
+                    self.hovered_id = hovered_widget.id
                     break
             if CG: break
         if not CG:
@@ -106,10 +109,7 @@ class WidgetManager(Manager):
         if msg == EventTypes.SCENEOBJECTSCREATED:
             for wid in data["widgets"]:
                 self.create_widget(wid)
-                print()
-
+                print(31232314123412)
 
     def __repr__(self):
         return 'widget_manager'
-
-
