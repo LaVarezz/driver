@@ -12,8 +12,8 @@ class BasicWidget:
         self.id = id
         self.rect = None
         self.surface = pg.surface.Surface((self.width, self.height))
-        self.panel = panel
         self.surface.fill('red')
+        self.panel = panel
 
         self.anchor = anchor
         self.layer = layer
@@ -36,6 +36,9 @@ class BasicWidget:
             app_height = p.height
         if self.anchor:
             ox, oy = self.offset
+            if 'CENTER' in self.anchor:
+                self.x = app_width//2-self.width//2+ox
+                self.y = app_height//2-self.height//2+oy
             if 'TOP' in self.anchor:
                 self.y = min(app_height - self.height, max(oy, 0))
             if 'BOTTOM' in self.anchor:

@@ -2,5 +2,7 @@
   "width": 600,
   "height": 900,
   "fps_limit": 120,
-  "dev_mode": 1
+  "dev_mode": 1,
+  "able_to_change": false
+
 }

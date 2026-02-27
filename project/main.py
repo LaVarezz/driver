@@ -1,5 +1,3 @@
-from sqlite3.dbapi2 import paramstyle
-
 from pygame import init
 
 from project.data.protocols.protocols import MainLike
@@ -9,7 +7,6 @@ from project.engine.events.event_types import EventTypes
 from project.engine.managers.input_manager.cursor import Cursor
 from project.engine.managers.main_manager.main_manager import MainManager
 from project.engine.utills.logging.log import setup_logging, log_info
-
 
 
 class Game(MainLike):
@@ -82,6 +79,11 @@ class Game(MainLike):
                 func = getattr(func, next_par)
             func()
 
+    def get_parameter(self, path):
+        parameter = self
+        for next_par in path:
+            parameter = getattr(parameter, next_par)
+        return parameter
 
     def shutdown(self):
         log_info('game finish: start')

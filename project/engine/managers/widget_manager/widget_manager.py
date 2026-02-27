@@ -109,7 +109,6 @@ class WidgetManager(Manager):
         if msg == EventTypes.SCENEOBJECTSCREATED:
             for wid in data["widgets"]:
                 self.create_widget(wid)
-                print(31232314123412)
 
     def __repr__(self):
         return 'widget_manager'

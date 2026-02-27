@@ -157,6 +157,9 @@ class MainLike(Protocol):
     events: EventBusLike
     cursor: CursorLike
 
+    def get_parameter(self, path) -> object: ...
+
+
 
 class MainManagerLike(ManagerLike, Protocol):
     window_manager: WindowManagerLike

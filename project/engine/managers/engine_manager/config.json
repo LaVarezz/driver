@@ -5,25 +5,26 @@
             "panels": {
                 "00001": {
                     "position": [
-                        159,
-                        124
+                        200,
+                        300
                     ],
                     "size": [
-                        300,
-                        100
+                        200,
+                        300
                     ],
                     "layer": 3,
                     "panel": null,
                     "moveable": true,
                     "visible": true,
                     "enabled": true,
-                    "anchor": "",
+                    "anchor": "CENTER",
                     "offset": [
                         0,
                         0
                     ]
                 }
-            }
+            },
+            "labels": {}
         }
     },
     "engine_scene": {
@@ -31,14 +32,14 @@
             "buttons": {
                 "00002": {
                     "position": [
-                        86,
-                        28
+                        25,
+                        35
                     ],
                     "size": [
                         150,
                         30
                     ],
-                    "text": "set_change",
+                    "text": "Continue",
                     "command": {
                         "action": "test_command",
                         "data": [
@@ -52,29 +53,81 @@
                     "moveable": true,
                     "visible": true,
                     "enabled": true,
-                    "anchor": "",
+                    "anchor": "CENTER",
                     "offset": [
-                        10,
-                        20
+                        0,
+                        -100
+                    ]
+                },
+                "00003": {
+                    "position": [
+                        25,
+                        85
+                    ],
+                    "size": [
+                        150,
+                        30
+                    ],
+                    "text": "Settings",
+                    "command": {
+                        "action": "test_command",
+                        "data": [
+                            "manager",
+                            "engine_manager",
+                            "able_to_change"
+                        ]
+                    },
+                    "panel": "00001",
+                    "layer": 0,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "CENTER",
+                    "offset": [
+                        0,
+                        -50
                     ]
                 }
             },
             "panels": {
                 "00001": {
                     "position": [
-                        159,
-                        124
+                        200,
+                        300
                     ],
                     "size": [
-                        300,
-                        100
+                        200,
+                        300
                     ],
                     "layer": 3,
                     "panel": null,
                     "moveable": true,
                     "visible": true,
                     "enabled": true,
-                    "anchor": "",
+                    "anchor": "CENTER",
+                    "offset": [
+                        0,
+                        0
+                    ]
+                }
+            },
+            "labels": {
+                "00004": {
+                    "position": [
+                        25,
+                        270
+                    ],
+                    "size": [
+                        150,
+                        30
+                    ],
+                    "text_pattern": "test label: \n %manager|window_manager|time%",
+                    "panel": "00001",
+                    "layer": 1,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": "BOTTOMCENTER",
+                    "anchor": "BOTTOMCENTER",
                     "offset": [
                         0,
                         0

@@ -16,14 +16,14 @@ class Button(BasicWidget):
                                                           center=(1, 1))
 
     def __call__(self):
-        self.command(self.main, self.data)
+        if not self.main.manager.engine_manager.able_to_change:
+            self.command(self.main, self.data)
 
 
     def update(self):
         pass
 
     def draw(self, window):
-
         if self.visible:
             window.blit(self.surface, self.rect)
 

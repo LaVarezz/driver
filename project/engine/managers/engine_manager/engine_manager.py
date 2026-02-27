@@ -27,9 +27,15 @@ class EngineManager(Manager):
         self.__data = load_json(create_path())
         self.commands = commands
 
-        self.able_to_change = True
+        self.stick_lines = {
+            'x': [],
+            'y': []
+        }
+
+        self.able_to_change = False
 
     def setup(self, settings):
+        self.able_to_change = self.main.settings.open_settings['able_to_change']
         print(self.__data)
         self.main.events.subscribe(self, EventTypes.SCENEHASCHAMGED)
 
@@ -39,15 +45,20 @@ class EngineManager(Manager):
         for scene in self.__data.keys():
             data[scene] = {
                 'widgets':
-                    {'buttons': {}, 'panels': {}}
+                    {'buttons': {}, 'panels': {}, "labels": {}}
             }
-            ''' сохранение панелей '''
 
             ''' сохранение кнопок '''
             for button_id in self.__data[scene]['widgets']['buttons']:
                 button = self.main.manager.widget_manager.get_widget(button_id)
                 data[scene]['widgets']['buttons'][button.id] = button.get_data_json_like()
 
+            ''' сохранение текстовых полей '''
+            for label_id in self.__data[scene]['widgets']['labels']:
+                label = self.main.manager.widget_manager.get_widget(label_id)
+                data[scene]['widgets']['labels'][label_id] = label.get_data_json_like()
+
+            ''' сохранение панелей '''
             for panel_id in self.__data[scene]['widgets']['panels']:
                 panel = self.main.manager.widget_manager.get_widget(panel_id)
                 data[scene]['widgets']['panels'][panel.id] = panel.get_data_json_like()
@@ -77,9 +88,19 @@ class EngineManager(Manager):
             for panel_id in widgets["panels"]:
                 panel = widgets["panels"][panel_id]
                 d['widgets'].append(
-                    WidgetTypes.PanelWidget.value(self.main, panel["position"], panel["size"], panel_id, panel["layer"],panel['panel'],
-                                                  panel["moveable"], panel["visible"], panel["enabled"], panel['anchor'], panel['offset']))
+                    WidgetTypes.PanelWidget.value(self.main, panel["position"], panel["size"], panel_id, panel["layer"],
+                                                  panel['panel'],
+                                                  panel["moveable"], panel["visible"], panel["enabled"],
+                                                  panel['anchor'], panel['offset']))
             self.main.events.fast_emit(EventTypes.SCENEOBJECTSCREATED, d)
+            ''' Label's serialize '''
+            for label_id in widgets["labels"]:
+                label = widgets["labels"][label_id]
+                d['widgets'].append(
+                    WidgetTypes.LabelWidget.value(self.main, label["position"], label["size"], label_id, label["layer"], label["panel"],
+                                                  label["anchor"], label["offset"], label["moveable"], label["visible"], label["anchor"],
+                                                  label["text_pattern"]))
+
             ''' Button's serialize '''
             for button_id in widgets["buttons"]:
                 button = widgets["buttons"][button_id]
@@ -87,9 +108,11 @@ class EngineManager(Manager):
                 d['widgets'].append(WidgetTypes.ButtonWidget.value(self.main, button["position"], button["size"],
                                                                    button_id, button["text"],
                                                                    (self.commands[button["command"]["action"]], dt,
-                                                                    button["command"]["action"]), button["layer"], button["panel"],
+                                                                    button["command"]["action"]), button["layer"],
+                                                                   button["panel"],
                                                                    button['moveable'], button["visible"],
-                                                                   button["enabled"], button['anchor'], button['offset']))
+                                                                   button["enabled"], button['anchor'],
+                                                                   button['offset']))
 
             self.main.events.emit(EventTypes.SCENEOBJECTSCREATED, d)
 

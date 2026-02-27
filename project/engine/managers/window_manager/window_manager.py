@@ -14,7 +14,6 @@ class WindowManager(Manager):
         self.app = None
         self.clock = None
         self.dt = float(0)
-        self.run = None
         log_info('Window manager has created')
 
     def setup(self, data):
