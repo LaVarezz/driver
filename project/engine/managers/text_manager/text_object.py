@@ -1,8 +1,7 @@
 from pygame import Surface, Rect, SRCALPHA
 
 from project.engine.managers.text_manager.word_object import WordObject
-
-
+from project.engine.utills.logging.log import log_warning
 
 
 class TextObject:
@@ -12,14 +11,14 @@ class TextObject:
         self.size = size
         self.x, self.y = cords
         self.lx, self.ly = length
-        self.cx, self.cy = self.x, self.y
         self.window = window
 
         self.lines = []
 
-        self.surface = Surface((self.lx, self.ly), SRCALPHA)
-        self.surface.set_colorkey('black')
-        self.rect = Rect(self.x, self.y, self.lx, self.ly)
+        if self.lx:
+            self.surface = Surface((self.lx, self.ly), SRCALPHA)
+            self.surface.set_colorkey('black')
+            self.rect = Rect(self.x, self.y, self.lx, self.ly)
 
         self.delta = delta
         self.outpost = outpost
@@ -31,9 +30,24 @@ class TextObject:
         words = []
         for element in self.text.split():
             words.append(WordObject(element, self.font, self.delta))
-
-        self.wrap(words)
+        try:
+            self.wrap(words)
+        except:
+            if self.lx != 0:
+                log_warning(
+                    f'Размер окна {self.lx, self.ly} не позволяет вывести текст ({self.text}) в достаточном размере. Для вывода текста, размер окна будет увеличен.')
+                self.lx = 0
+            self.wrap(words)
         self.layout()
+
+    def recalculate(self, text):
+
+        self.surface = None
+        self.rect = None
+        self.lines = []
+        self.lx = 0
+        self.text = text
+        self.setup()
 
     def wrap(self, unsorted):
         '''
@@ -42,25 +56,39 @@ class TextObject:
         length = 0
         line = []
         ''' если прокатит в одну строчку'''
-        if self.get_max_len(unsorted, self.lx):
-            self.lines.append(unsorted)
-            return
+        if self.lx:
+            if self.get_max_len(unsorted, self.lx):
+                self.lines.append(unsorted)
+                return
+            else:
+                for word in unsorted[:]:
+                    px = word.get_length()
+                    if length + px + self.outpost < self.lx:
+                        ''' если слово еще влезает в строчку'''
+                        line.append(word)
+                        length += px + self.outpost
+                        if unsorted:
+                            unsorted.pop(0)
+                    else:
+                        ''' если нет '''
+                        self.lines.append(line)
+                        if unsorted:
+                            return self.wrap(unsorted)
+                        else:
+                            return
         else:
             for word in unsorted[:]:
                 px = word.get_length()
-                if length + px + self.outpost < self.lx:
-                    ''' если слово еще влезает в строчку'''
-                    line.append(word)
-                    length += px + self.outpost
-                    if unsorted:
-                        unsorted.pop(0)
-                else:
-                    ''' если нет '''
-                    self.lines.append(line)
-                    if unsorted:
-                        return self.wrap(unsorted)
-                    else:
-                        return
+                self.lx += px + self.outpost
+                line.append(word)
+                unsorted.pop(0)
+            self.lines.append(line)
+
+            self.lx += self.outpost
+            self.surface = Surface((self.lx, self.ly), SRCALPHA)
+            self.surface.set_colorkey('black')
+            self.rect = Rect(self.x, self.y, self.lx, self.ly)
+            return
 
     def layout(self):
         ''' Вызывается единожды. Рассчитывает точные положения слов внутри строки. '''
@@ -71,7 +99,6 @@ class TextObject:
             for word in line:
                 word.end_setup((x, y))
                 x += word.get_length()
-                print(x, y)
                 my = max(my, word.get_height())
                 x += self.outpost
             y += my
@@ -82,7 +109,6 @@ class TextObject:
     def to_center(self):
         ''' Последний этап обработки. Центрирует объект при необходимости. завершает обработку внутри слова. '''
         center_x, center_y = self.center
-
         if center_x:
             for line in self.lines:
                 dx = (self.lx - self.get_len(line)) // 2
@@ -108,4 +134,5 @@ class TextObject:
                 word.draw(self.surface)
         self.window.blit(self.surface, self.rect)
 
-
+    def __repr__(self):
+        return f'Text object with text: {self.text}'

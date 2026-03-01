@@ -12,7 +12,6 @@ class BasicWidget:
         self.id = id
         self.rect = None
         self.surface = pg.surface.Surface((self.width, self.height))
-        self.surface.fill('red')
         self.panel = panel
 
         self.anchor = anchor

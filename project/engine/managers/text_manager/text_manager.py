@@ -19,9 +19,10 @@ class TextManager(Manager, protocols.ManagerLike):
         self._objects = []
         self._sizes = []
 
+
     def setup(self, data: protocols.SettingsLike) -> None:
         ''' кеширует алфавит в словари '''
-        alp = '1234567890-=*qwertyuiopasdfghjklzxcvbnmйцукенгшщзхъфывапролджэячсмитьбю.,_ QWERTYUIOPASDFGHJKLZXCVBNMЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ'
+        alp = '1234567890-=*qwertyuiopasdfghjklzxcvbn:mйцукенгшщзхъфывапролджэячсмитьбю.,_ QWERTYUIOPASDFGHJKLZXCVBNMЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ'
         for size in data.game_settings['text_sizes']:
             d = {}
             font = pg.font.SysFont('Arial', size)
@@ -32,11 +33,18 @@ class TextManager(Manager, protocols.ManagerLike):
             self._sizes.append(size)
 
     def create_text_object(self, cords: tuple, length: tuple, window, text: str, size_index: int, outpost=10, delta=1,
-                           center=(0, 0)):
+                           center=(0, 0), static=True):
         ''' создает блок текста. дальнейшая логика внутри text_object '''
         real_size = self._sizes[size_index]
+        obj = TextObject(cords, length, text, window, self._fonts[real_size], real_size, outpost, delta, center)
         self._objects.append(
-            TextObject(cords, length, text, window, self._fonts[real_size], real_size, outpost, delta, center))
+            obj)
+        return obj
+
+    def remove_text_object(self, obj):
+        if obj in self._objects:
+            self._objects.remove(obj)
+
 
     def update_text_objects(self):
         for obj in self._objects:

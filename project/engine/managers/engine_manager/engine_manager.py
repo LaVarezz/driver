@@ -36,7 +36,6 @@ class EngineManager(Manager):
 
     def setup(self, settings):
         self.able_to_change = self.main.settings.open_settings['able_to_change']
-        print(self.__data)
         self.main.events.subscribe(self, EventTypes.SCENEHASCHAMGED)
 
     def save_config_to_json(self):
@@ -64,7 +63,6 @@ class EngineManager(Manager):
                 data[scene]['widgets']['panels'][panel.id] = panel.get_data_json_like()
 
             self.__data[scene] = data[scene]
-        print(self.__data)
         path = create_path()
         with open(path, 'w', encoding="utf-8") as f:
             json.dump(self.__data, f, indent=4)
@@ -98,7 +96,7 @@ class EngineManager(Manager):
                 label = widgets["labels"][label_id]
                 d['widgets'].append(
                     WidgetTypes.LabelWidget.value(self.main, label["position"], label["size"], label_id, label["layer"], label["panel"],
-                                                  label["anchor"], label["offset"], label["moveable"], label["visible"], label["anchor"],
+                                                  label["anchor"], label["offset"], label["moveable"], label["visible"], label["enabled"],
                                                   label["text_pattern"]))
 
             ''' Button's serialize '''

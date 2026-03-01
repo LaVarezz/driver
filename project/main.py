@@ -56,8 +56,8 @@ class Game(MainLike):
 
             ''' Отрисовка менеджеров '''
             self.manager.scene_manager.current_scene.draw()
-            self.manager.widget_manager.draw(self.manager.window_manager.app)
             self.manager.text_manager.draw_text_objects()
+            self.manager.widget_manager.draw(self.manager.window_manager.app)
 
             ''' обновление экрана '''
             self.manager.window_manager.update_window()

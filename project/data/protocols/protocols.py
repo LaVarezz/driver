@@ -113,29 +113,12 @@ class WidgetManagerLike(ManagerLike, Protocol):
 
     def get_all_widgets(self) -> list: ...
 
-
 class TextManagerLike(ManagerLike, Protocol):
     def create_text_object(self, cords: tuple, length: tuple, window, text: str, size_index: int, outpost=10, delta=1,
-                           center=(0, 0)): ...
-import json
-import os
+                           center=(0, 0), static=True) -> object:...
+    def remove_text_object(self, object): ...
 
-
-from project.engine.managers.basic_manager import Manager
-
-
-def load_json(path):
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def create_path():
-    p = os.path.join(os.path.dirname(__file__), 'config.json')
-    abs = os.path.abspath(p)
-    return abs
-
-
-class EngineManagerLike(Manager):
+class EngineManagerLike(ManagerLike):
     able_to_change: bool
     def setup(self, settings: SettingsLike): ...
 

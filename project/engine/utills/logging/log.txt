@@ -1,17 +1,21 @@
-11:08:50 | INFO | game initialization: start
-11:08:50 | INFO | sub managers init: start
-11:08:50 | INFO | Window manager is being creating
-11:08:50 | INFO | Window manager has created
-11:08:50 | INFO | sub managers init: complete
-11:08:50 | INFO | sub managers setup: start
-11:08:50 | INFO | Window manager is on setup
-11:08:50 | INFO | Window manager setup if finish
-11:08:50 | INFO | scenes changing: start
-11:08:50 | INFO | scenes changing: finish
-11:08:50 | INFO | sub managers setup: complete
-11:08:50 | INFO | game initialization: finish
-11:08:52 | INFO | creating json file: start
-11:08:52 | INFO | creating json file: finish
-11:08:52 | INFO | interface has saved
-11:08:52 | INFO | game finish: start
-11:08:52 | INFO | game finish: done
+15:52:53 | INFO | game initialization: start
+15:52:53 | INFO | sub managers init: start
+15:52:53 | INFO | Window manager is being creating
+15:52:53 | INFO | Window manager has created
+15:52:53 | INFO | sub managers init: complete
+15:52:53 | INFO | sub managers setup: start
+15:52:53 | INFO | Window manager is on setup
+15:52:53 | INFO | Window manager setup if finish
+15:52:53 | INFO | scenes changing: start
+15:52:53 | INFO | scenes changing: finish
+15:52:53 | INFO | sub managers setup: complete
+15:52:53 | INFO | game initialization: finish
+15:52:53 | WARNING | Размер окна (None, 25) не позволяет вывести текст (test label: 
+ Loading 50) в достаточном размере. Для вывода текста, размер окна будет увеличен.
+15:52:53 | WARNING | Размер окна (None, 25) не позволяет вывести текст (... ) в достаточном размере. Для вывода текста, размер окна будет увеличен.
+15:52:53 | WARNING | Размер окна (None, 25) не позволяет вывести текст (0) в достаточном размере. Для вывода текста, размер окна будет увеличен.
+15:53:31 | INFO | creating json file: start
+15:53:31 | INFO | creating json file: finish
+15:53:31 | INFO | interface has saved
+15:53:31 | INFO | game finish: start
+15:53:31 | INFO | game finish: done

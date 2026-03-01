@@ -5,12 +5,12 @@
             "panels": {
                 "00001": {
                     "position": [
-                        200,
-                        300
+                        100,
+                        200
                     ],
                     "size": [
-                        200,
-                        300
+                        400,
+                        500
                     ],
                     "layer": 3,
                     "panel": null,
@@ -32,8 +32,8 @@
             "buttons": {
                 "00002": {
                     "position": [
-                        25,
-                        35
+                        125,
+                        135
                     ],
                     "size": [
                         150,
@@ -61,8 +61,8 @@
                 },
                 "00003": {
                     "position": [
-                        25,
-                        85
+                        125,
+                        185
                     ],
                     "size": [
                         150,
@@ -92,12 +92,12 @@
             "panels": {
                 "00001": {
                     "position": [
-                        200,
-                        300
+                        100,
+                        200
                     ],
                     "size": [
-                        200,
-                        300
+                        400,
+                        500
                     ],
                     "layer": 3,
                     "panel": null,
@@ -115,13 +115,13 @@
                 "00004": {
                     "position": [
                         25,
-                        270
+                        390
                     ],
                     "size": [
-                        150,
-                        30
+                        350,
+                        100
                     ],
-                    "text_pattern": "test label: \n %manager|window_manager|time%",
+                    "text_pattern": "test label: \n Loading 50%... %manager|window_manager|time%",
                     "panel": "00001",
                     "layer": 1,
                     "moveable": true,
@@ -130,7 +130,7 @@
                     "anchor": "BOTTOMCENTER",
                     "offset": [
                         0,
-                        0
+                        10
                     ]
                 }
             }
