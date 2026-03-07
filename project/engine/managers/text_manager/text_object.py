@@ -15,7 +15,7 @@ class TextObject:
 
         self.lines = []
 
-        if self.lx:
+        if self.lx and self.ly:
             self.surface = Surface((self.lx, self.ly), SRCALPHA)
             self.surface.set_colorkey('black')
             self.rect = Rect(self.x, self.y, self.lx, self.ly)
@@ -37,16 +37,24 @@ class TextObject:
                 log_warning(
                     f'Размер окна {self.lx, self.ly} не позволяет вывести текст ({self.text}) в достаточном размере. Для вывода текста, размер окна будет увеличен.')
                 self.lx = 0
+            if self.ly != 0:
+                log_warning(
+                    f'Размер окна {self.lx, self.ly} не позволяет вывести текст ({self.text}) в достаточном размере. Для вывода текста, размер окна будет увеличен.')
+                self.ly = 0
             self.wrap(words)
         self.layout()
 
     def recalculate(self, text):
-
         self.surface = None
         self.rect = None
         self.lines = []
         self.lx = 0
         self.text = text
+        self.setup()
+
+    def replace(self, dx):
+        self.x += dx
+        self.rect = Rect(self.x, self.y, self.lx, self.ly)
         self.setup()
 
     def wrap(self, unsorted):
@@ -55,14 +63,17 @@ class TextObject:
         '''
         length = 0
         line = []
+        cy = 0
         ''' если прокатит в одну строчку'''
         if self.lx:
             if self.get_max_len(unsorted, self.lx):
                 self.lines.append(unsorted)
+                if not self.ly: self.ly = self.get_max_height(unsorted)
                 return
             else:
                 for word in unsorted[:]:
                     px = word.get_length()
+                    cy = max(cy, word.get_height())
                     if length + px + self.outpost < self.lx:
                         ''' если слово еще влезает в строчку'''
                         line.append(word)
@@ -73,18 +84,26 @@ class TextObject:
                         ''' если нет '''
                         self.lines.append(line)
                         if unsorted:
+                            if not self.ly: self.ly = cy
+
                             return self.wrap(unsorted)
                         else:
+                            if not self.ly: self.ly = cy
                             return
         else:
+            cy = 0
             for word in unsorted[:]:
                 px = word.get_length()
                 self.lx += px + self.outpost
+                if not self.ly:
+                    cy = max(cy, word.get_height())
+
                 line.append(word)
                 unsorted.pop(0)
             self.lines.append(line)
-
             self.lx += self.outpost
+            if not self.ly:
+                self.ly = cy
             self.surface = Surface((self.lx, self.ly), SRCALPHA)
             self.surface.set_colorkey('black')
             self.rect = Rect(self.x, self.y, self.lx, self.ly)
@@ -121,6 +140,9 @@ class TextObject:
 
     def get_max_len(self, words, length):
         return sum([i.get_length() for i in words]) + self.outpost * (len(words) - 1) <= length
+
+    def get_max_height(self, words):
+        return max([i.get_height() for i in words])
 
     def get_len(self, line):
         return sum([i.get_length() for i in line]) + self.outpost * (len(line) - 1)

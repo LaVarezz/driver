@@ -97,7 +97,7 @@ class EngineManager(Manager):
                 d['widgets'].append(
                     WidgetTypes.LabelWidget.value(self.main, label["position"], label["size"], label_id, label["layer"], label["panel"],
                                                   label["anchor"], label["offset"], label["moveable"], label["visible"], label["enabled"],
-                                                  label["text_pattern"]))
+                                                  label["text_pattern"], label["text_anchor"], label["text_size"]))
 
             ''' Button's serialize '''
             for button_id in widgets["buttons"]:

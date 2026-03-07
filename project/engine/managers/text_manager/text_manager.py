@@ -22,7 +22,7 @@ class TextManager(Manager, protocols.ManagerLike):
 
     def setup(self, data: protocols.SettingsLike) -> None:
         ''' кеширует алфавит в словари '''
-        alp = '1234567890-=*qwertyuiopasdfghjklzxcvbn:mйцукенгшщзхъфывапролджэячсмитьбю.,_ QWERTYUIOPASDFGHJKLZXCVBNMЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ'
+        alp = '1234567890-=*qwertyuiopasdfghjklzxcvbn:mйцукенгшщзхъфывапролджэячсмитьбю.,_ QWERTYUIOPASDFGHJKLZXCVBNMЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ!'
         for size in data.game_settings['text_sizes']:
             d = {}
             font = pg.font.SysFont('Arial', size)

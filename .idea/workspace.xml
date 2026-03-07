@@ -4,265 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.5 &#10;- Добавлен текстовый виджет label &#10;- Виджеты можно центрировать, а благодаря смещению можно создавать интерфейс без особых усилий.&#10;- Добавлены предыдущие версии проекта&#10;- Теперь код октрытый.">
+    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.5.2&#10;- label теперь корректно отображается">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/Classes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/GUI.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/StatusEffect.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/boofer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/effects_animation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/game_field.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/personality.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/Hunter1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/Skeleton enemy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blast/strike_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blast/strike_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blast/strike_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blast/strike_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blast/strike_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blast/strike_effect_spritesheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/blinks/blink_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/fire/fire1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/fire/fire2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/fire/fire3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/fire/fire4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/fire/fire5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/flameshot/flameshot_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/flameshot/flameshot_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/flameshot/flameshot_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/flameshot/flameshot_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/flameshot/flameshot_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/flameshot/flameshot_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/flameshot/flameshot_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/flameshot/flameshot_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/flameshot/flameshot_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/game_background_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/golem1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/grass/grass-alternative-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/grass/pond1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/mage_avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/main_font.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/necro_avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/punch2/punch_action_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/punch2/punch_action_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/punch2/punch_action_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/punch2/punch_action_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/punch2/punch_action_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/punch2/punch_action_06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/punch2/punch_action_spritesheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/regeneration/regen_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/regeneration/regen_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/regeneration/regen_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/regeneration/regen_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/regeneration/regen_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/regeneration/regen_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/regeneration/regen_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/regeneration/regen_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/regeneration/regen_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/regeneration/regen_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/rocks/rock1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/rocks/rock2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/rocks/rock3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/rocks/rock4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/rogue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/slash3/horizonal_slash_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/slash3/horizonal_slash_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/slash3/horizonal_slash_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/slash3/horizonal_slash_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/slash3/horizonal_slash_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/slash3/horizonal_slash_effect_spritesheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Large Spruce Tree - COLD - 0000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Large Spruce Tree - COLD - 0001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Large Spruce Tree - COLD - 0002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Large Spruce Tree - COLD - 0003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Large Spruce Tree - COLD - 0004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Large Spruce Tree - COLD - 0005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Large Spruce Tree - COLD - 0006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Large Spruce Tree - COLD - 0007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Large Spruce Tree - COLD - 0008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Large Spruce Tree - COLD - 0009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Slim Spruce Tree - TEAL - 0000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Slim Spruce Tree - TEAL - 0001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Slim Spruce Tree - TEAL - 0002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Slim Spruce Tree - TEAL - 0003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Slim Spruce Tree - TEAL - 0004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Slim Spruce Tree - TEAL - 0005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Slim Spruce Tree - TEAL - 0006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Slim Spruce Tree - TEAL - 0007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Slim Spruce Tree - TEAL - 0008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/trees/Slim Spruce Tree - TEAL - 0009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/sprites/warrior_avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_v1/tools.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/data/protocols/protocols.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/protocols/protocols.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/engine_manager/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/engine_manager/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/engine_manager/engine_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/engine_manager/engine_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/text_manager/text_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/text_manager/text_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/text_manager/text_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/text_manager/text_object.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/basic_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/basic_widget.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/label.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/label.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/sublabel.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/sublabel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/battlequeue.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/core.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/events/basic_event.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/events/either/changed_events/UI/pointed_ship_changed.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/events/either/changed_events/UI/pointed_ship_changed_raw.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/events/either/changed_events/UI/selected_ship_changed_raw.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/events/either/changed_events/core/selected_move_changed.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/events/either/changed_events/gameplay/selected_ship_changed.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/events/either/changed_events/gameplay/settings_panel_changed.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/events/either/listeners/panel_listener.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/events/either/listeners/text_listener.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/events/either/ship_events/ship_damaged.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/events/event_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/battle/updates.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/contollers/binds/battle/battlestate_binds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/contollers/binds/normal/normalmenu_binds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/contollers/handler.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/debug/debug_actions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/debug/debug_state.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/debug/logs/main_log.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/debug/logs/main_log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/debug/stats/statistic.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/debug/statsstatistic.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/managers/main_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/managers/managers/core/object_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/managers/managers/core/turn_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/managers/managers/data/contain_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/managers/managers/data/download_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/managers/managers/data/event_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/managers/managers/dev/statistic_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/managers/managers/ui/animation_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/managers/managers/ui/camera_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/managers/managers/ui/click_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/managers/managers/ui/image_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/managers/managers/ui/overlay_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/managers/managers/ui/widget_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/scenes/scene_loops/battle_scene_loop.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/scenes/scene_loops/loading_scene_loop.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/scenes/scene_loops/main_scene_loop.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/scenes/scene_loops/settings_scene_loop.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/scenes/scenes/basic_scene.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/scenes/scenes/battle_scene.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/scenes/scenes/load_scene.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/scenes/scenes/main_scene.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/engine/scenes/scenes/settings_scene.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/game_objects/cells/cell.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/game_objects/cursors/cursor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/game_objects/images/bgs/bg.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/game_objects/images/image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/game_objects/ships/classes/destroyer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/game_objects/ships/classes/frigate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/game_objects/ships/operations/attack.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/game_objects/ships/operations/moving.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/game_objects/ships/ship.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/game_objects/text_object/text_object.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/readme(please).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/backgrounds/load_menu/bg1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/cache/text_cache.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/fonts/font_zero.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/attack/fregat_atk_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/attack/fregat_atk_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/attack/fregat_atk_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/attack/fregat_atk_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/attack/fregat_atk_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/attack/fregat_atk_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/attack/fregat_atk_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/attack/fregat_atk_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/idle/fregat_idle_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/idle/fregat_idle_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/idle/fregat_idle_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/idle/fregat_idle_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/idle/fregat_idle_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/idle/fregat_idle_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/idle/fregat_idle_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/idle/fregat_idle_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/walk/fregat_walk_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/walk/fregat_walk_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/walk/fregat_walk_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/walk/fregat_walk_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/walk/fregat_walk_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/walk/fregat_walk_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/walk/fregat_walk_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/resourses/sprites/ships/frigate/lm-1/walk/fregat_walk_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/calculators/get_scripts.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/calculators/is_cell_occupied.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/calculators/is_object_on_screen.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/calculators/is_screen_changed.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/control/trigger.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/generation/bg_generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/generation/cell_generation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/generation/map_generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/generation/queue_generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/generation/ship_generation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/loaders/save_json.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/utils/battle_utils/damage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/utils/battle_utils/get_ship.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/utils/battle_utils/initiative_tools.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/utils/battle_utils/place_ship_to_cords.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/utils/battle_utils/queue_scripts.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/utils/battle_utils/recount_ships_surfases.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/utils/battle_utils/reside.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/utils/exit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/utils/reselect_ship.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/scripts/utils/switch.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/configs/resourse_configurations/resourse_configurations.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/configs/ship_config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/constants/battle_constants.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/constants/click_constants.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/constants/event_types.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/constants/scenes_constants.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/constants/ship_constants.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/constants/trigger_constants.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/protocols/protocols.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/settings/battle_settings/battle_settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/settings/battle_settings/calculator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/settings/battle_settings/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/settings/battle_settings/env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/settings/main_menu_settings/calculator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/settings/main_menu_settings/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/settings/main_menu_settings/env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/settings/main_menu_settings/main_menu_settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/settings/main_settings/calculator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/settings/main_settings/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/settings/main_settings/env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/settings/settings/main_settings/main_settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/ui/animations/animation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/ui/animations/animation_effects/death_panel_effect.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/ui/animations/animation_effects/death_ship_effect.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/ui/animations/animation_effects/moving_effect.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/ui/debug/debug_render.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/ui/widgets/UIelement.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/ui/widgets/buttons/button.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/ui/widgets/buttons/commands.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/ui/widgets/frames/frame.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/ui/widgets/panels/constant_panels/contoll_panel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/ui/widgets/panels/constant_panels/overlay_panel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/ui/widgets/panels/constant_panels/quick_info_panel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space/ui/widgets/panels/panel.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,31 +56,31 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.cursor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.engine_scene.executor&quot;: &quot;Run&quot;,
-    &quot;Python.event_bus.executor&quot;: &quot;Run&quot;,
-    &quot;Python.log.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (3).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (4).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_settings.executor&quot;: &quot;Run&quot;,
-    &quot;Python.protocols.executor&quot;: &quot;Run&quot;,
-    &quot;Python.settings_lib.executor&quot;: &quot;Run&quot;,
-    &quot;Python.text_manager.executor&quot;: &quot;Run&quot;,
-    &quot;Python.text_object.executor&quot;: &quot;Run&quot;,
-    &quot;Python.widget_manager.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Galya/PycharmProjects/driver/game_v2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.json.schema&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Main (1).executor": "Run",
+    "Python.Main.executor": "Run",
+    "Python.cursor.executor": "Run",
+    "Python.engine_scene.executor": "Run",
+    "Python.event_bus.executor": "Run",
+    "Python.log.executor": "Run",
+    "Python.main (1).executor": "Run",
+    "Python.main (2).executor": "Run",
+    "Python.main (3).executor": "Run",
+    "Python.main (4).executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main_settings.executor": "Run",
+    "Python.protocols.executor": "Run",
+    "Python.settings_lib.executor": "Run",
+    "Python.text_manager.executor": "Run",
+    "Python.text_object.executor": "Run",
+    "Python.widget_manager.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Galya/PycharmProjects/driver/game_v2",
+    "settings.editor.selected.configurable": "settings.json.schema"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Galya\PycharmProjects\driver\game_v2" />
@@ -563,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772179856578</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="0.0.5.2&#10;- label теперь корректно отображается">
+      <option name="closed" value="true" />
+      <created>1772371119748</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1772371119748</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -574,7 +331,8 @@
     <MESSAGE value="0.0.3 &#10;- текст теперь выводится на кастомную поверхность&#10;- сохранение и изменение виджетов в json доступно в самом окне. Версия стабильна." />
     <MESSAGE value="0.0.4 &#10;- расширены поля для json &#10;- добавлено прилипание (archor) и отступы (offset) для виджетов." />
     <MESSAGE value="0.0.5 &#10;- Добавлен текстовый виджет label &#10;- Виджеты можно центрировать, а благодаря смещению можно создавать интерфейс без особых усилий.&#10;- Добавлены предыдущие версии проекта&#10;- Теперь код октрытый." />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.5 &#10;- Добавлен текстовый виджет label &#10;- Виджеты можно центрировать, а благодаря смещению можно создавать интерфейс без особых усилий.&#10;- Добавлены предыдущие версии проекта&#10;- Теперь код октрытый." />
+    <MESSAGE value="0.0.5.2&#10;- label теперь корректно отображается" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.5.2&#10;- label теперь корректно отображается" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
