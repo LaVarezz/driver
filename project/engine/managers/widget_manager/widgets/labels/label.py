@@ -1,6 +1,9 @@
+from idlelib.replace import replace
+
 from project.data.protocols.protocols import MainLike
 from project.engine.managers.widget_manager.widgets.basic_widget import BasicWidget
 from project.engine.managers.widget_manager.widgets.labels.sublabel import Sublabel
+from project.engine.utills.logging.log import log_info
 
 
 class Label(BasicWidget):
@@ -13,29 +16,48 @@ class Label(BasicWidget):
         self.text_anchor = text_anchor
         self.text_case = []
         self.text_size = text_size
-        self.convert_pattern()
 
-    def convert_pattern(self):
-        ''' Разбивает шаблон на текст и подклассы sublabel. Все обработанные значения в хранятся в text_case '''
-        lx = ly = 0
-        dirty_converted = self.text_pattern.split('%')
-        for component in dirty_converted:
-            if "|" not in component:
-                if component:
+        def convert_pattern(self):
+            ''' Оперирует с текстовым шаблоном text_pattern, переводит шаблон в текстовые объекты вида
+            list[[sublabel, object, value] или object[] в зависимости от того, является ли объект статичным или динамичным
+            принцип работы:
+            [1] - заменяет все %% на ^ - символ не должен использоваться в тексте
+            [2] - разбивает строку на части по ^
+            [3] - проходится по каждой разбитой части и превращает ее либо в текст, либо в слушателя
+            [3.1] - если кейсом является текст: в text_case добавляется |text_object|
+            [3.2] - если кейсом явлется слушатель: в text_case добавляется list[sublabel, object, value]
+            [4] - проводится центрирование текста внутри label. См. to_anchor()
+            обработанные данные хранятся в self.text_case
+            вход: фиксированный text_pattern
+            итог: заполняетя text_case, вызывается to_anchor
+            примечания: sublabelом объект считается, если имеет хотя бы одну зависимость, т.е обращение "main" воспринимается как текст
+            пример входных данных: "Welcome to the Hell! %%[5]main|manager|window_manager|time%%"
+            '''
+            lx = ly = 0
+            dirty_converted = self.text_pattern.replace("%%", "^") # 1
+            dirty_converted = dirty_converted.split("^") # 2
+            for case in dirty_converted: #3
+                if not case:
+                    continue
+                if "|" not in case: #3.1
                     obj = self.main.manager.text_manager.create_text_object((lx, ly), (None, None), self.surface,
-                                                                            component, self.text_size, 5)
+                                                                            case, self.text_size, 5)
                     self.text_case.append(obj)
                     lx += obj.lx
+                else:
+                    if case:
+                        path = case.split('|') #3.2
+                        sub = Sublabel(self.main, path)
+                        obj = self.main.manager.text_manager.create_text_object((lx, ly), (None, None), self.surface, sub.value,
+                                                                                self.text_size, 5)
+                        self.text_case.append([sub, obj, sub.value])
+                        lx += obj.lx
 
-            else:
-                path = component.removeprefix('%').removesuffix('%').split('|')
-                sub = Sublabel(self.main, path)
-                obj = self.main.manager.text_manager.create_text_object((lx, ly), (None, None), self.surface, sub.value,
-                                                                        self.text_size, 5)
-                self.text_case.append([sub, obj, sub.value])
-                lx += obj.lx
+            log_info(f"Текстовое поле с текстовыми объектами: {self.text_case} успешно создана.")
 
-        self.to_anchor(lx)
+            self.to_anchor(lx) #4
+
+        convert_pattern(self)
 
     def to_anchor(self, lx):
         dx = 0

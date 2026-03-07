@@ -141,15 +141,15 @@
                         350,
                         100
                     ],
-                    "text_pattern": "Welcome to the hell!",
+                    "text_pattern": "Welcome to the Hell! %%[5]main|manager|window_manager|time%%",
                     "panel": "00005",
                     "layer": 1,
                     "moveable": true,
                     "visible": true,
                     "enabled": true,
                     "anchor": "BOTTOMCENTER",
-                    "text_anchor": "CENTER",
-                    "text_size": 3,
+                    "text_anchor": "",
+                    "text_size": 1,
                     "offset": [
                         0,
                         20

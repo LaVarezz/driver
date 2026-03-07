@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.5.2&#10;- label теперь корректно отображается">
+    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.5.3&#10;- label поддерживает центрирование текста и автоматический подсчет размера sublabel's.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/engine_manager/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/engine_manager/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/engine_manager/engine_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/engine_manager/engine_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/text_manager/text_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/text_manager/text_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/text_manager/text_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/text_manager/text_object.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/label.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/label.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/sublabel.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/sublabel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772371119748</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="0.0.5.3&#10;- label поддерживает центрирование текста и автоматический подсчет размера sublabel's.">
+      <option name="closed" value="true" />
+      <created>1772887722798</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1772887722798</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -332,7 +340,8 @@
     <MESSAGE value="0.0.4 &#10;- расширены поля для json &#10;- добавлено прилипание (archor) и отступы (offset) для виджетов." />
     <MESSAGE value="0.0.5 &#10;- Добавлен текстовый виджет label &#10;- Виджеты можно центрировать, а благодаря смещению можно создавать интерфейс без особых усилий.&#10;- Добавлены предыдущие версии проекта&#10;- Теперь код октрытый." />
     <MESSAGE value="0.0.5.2&#10;- label теперь корректно отображается" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.5.2&#10;- label теперь корректно отображается" />
+    <MESSAGE value="0.0.5.3&#10;- label поддерживает центрирование текста и автоматический подсчет размера sublabel's." />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.5.3&#10;- label поддерживает центрирование текста и автоматический подсчет размера sublabel's." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

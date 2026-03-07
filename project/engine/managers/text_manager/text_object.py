@@ -1,7 +1,7 @@
 from pygame import Surface, Rect, SRCALPHA
 
 from project.engine.managers.text_manager.word_object import WordObject
-from project.engine.utills.logging.log import log_warning
+from project.engine.utills.logging.log import log_warning, log_error
 
 
 class TextObject:
@@ -32,15 +32,17 @@ class TextObject:
             words.append(WordObject(element, self.font, self.delta))
         try:
             self.wrap(words)
-        except:
+        except Exception as e:
             if self.lx != 0:
                 log_warning(
-                    f'Размер окна {self.lx, self.ly} не позволяет вывести текст ({self.text}) в достаточном размере. Для вывода текста, размер окна будет увеличен.')
+                    f'Размер окна {self.lx, self.ly} не позволяет вывести текст ({self.text}) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.')
                 self.lx = 0
             if self.ly != 0:
                 log_warning(
-                    f'Размер окна {self.lx, self.ly} не позволяет вывести текст ({self.text}) в достаточном размере. Для вывода текста, размер окна будет увеличен.')
+                    f'Размер окна {self.lx, self.ly} не позволяет вывести текст ({self.text}) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.')
                 self.ly = 0
+            else:
+                log_error(f"Ошибка при размещении текста: {e}")
             self.wrap(words)
         self.layout()
 
@@ -49,13 +51,13 @@ class TextObject:
         self.rect = None
         self.lines = []
         self.lx = 0
+        self.ly = 0
         self.text = text
         self.setup()
 
     def replace(self, dx):
         self.x += dx
         self.rect = Rect(self.x, self.y, self.lx, self.ly)
-        self.setup()
 
     def wrap(self, unsorted):
         '''

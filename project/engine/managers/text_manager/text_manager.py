@@ -13,7 +13,7 @@ class TextManager(Manager, protocols.ManagerLike):
     - центрирование текстового блока
     '''
 
-    def __init__(self, main: protocols.MainLike):
+    def __init__(self):
         super().__init__()
         self._fonts = {}
         self._objects = []
@@ -77,7 +77,7 @@ if test:
 
 
     main = main()
-    tm = TextManager(main)
+    tm = TextManager()
     tm.setup(main.settings)
     tm.create_text_object((30, 50), (300, 150), window, '111 222 333 444 555 666 777 888 999', 3, 10, center=(0, 0))
 

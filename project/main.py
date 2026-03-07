@@ -53,7 +53,6 @@ class Game(MainLike):
             self.manager.widget_manager.update()
             self.manager.text_manager.update_text_objects()
 
-
             ''' Отрисовка менеджеров '''
             self.manager.scene_manager.current_scene.draw()
             self.manager.text_manager.draw_text_objects()
@@ -61,7 +60,6 @@ class Game(MainLike):
 
             ''' обновление экрана '''
             self.manager.window_manager.update_window()
-
 
     def trigger(self, msg, data):
         if msg == EventTypes.EXITGAMEEVENT:
@@ -81,7 +79,7 @@ class Game(MainLike):
 
     def get_parameter(self, path):
         parameter = self
-        for next_par in path:
+        for next_par in path[1:]:
             parameter = getattr(parameter, next_par)
         return parameter
 
@@ -90,14 +88,12 @@ class Game(MainLike):
         self.events.unsubscribe(self, EventTypes.EXITGAMEEVENT)
         log_info('game finish: done')
 
-
     def dev_process(self):
         ''' сюды вводить код, который выполняется при старте в целях проверки и отладки '''
         pass
 
     def __repr__(self):
         return 'Main game object'
-
 
 
 if __name__ == '__main__':
