@@ -36,43 +36,46 @@ class EngineManager(Manager):
 
     def setup(self, settings):
         self.able_to_change = self.main.settings.open_settings['able_to_change']
-        self.main.events.subscribe(self, EventTypes.SCENEHASCHAMGED)
+        self.main.events.subscribe(self, EventTypes.SCENEHASCHANGED)
 
     def save_config_to_json(self):
         log_info('creating json file: start')
         data = {}
         for scene in self.__data.keys():
-            data[scene] = {
-                'widgets':
-                    {'buttons': {}, 'panels': {}, "labels": {}}
-            }
+            # КОСТЫЫЫЫЫЛЬ!
+            if scene == self.main.manager.scene_manager.current_scene:
 
-            ''' сохранение кнопок '''
-            for button_id in self.__data[scene]['widgets']['buttons']:
-                button = self.main.manager.widget_manager.get_widget(button_id)
-                data[scene]['widgets']['buttons'][button.id] = button.get_data_json_like()
+                data[scene] = {
+                    'widgets':
+                        {'buttons': {}, 'panels': {}, "labels": {}}
+                }
 
-            ''' сохранение текстовых полей '''
-            for label_id in self.__data[scene]['widgets']['labels']:
-                label = self.main.manager.widget_manager.get_widget(label_id)
-                data[scene]['widgets']['labels'][label_id] = label.get_data_json_like()
+                ''' сохранение кнопок '''
+                for button_id in self.__data[scene]['widgets']['buttons']:
+                    button = self.main.manager.widget_manager.get_widget(button_id)
+                    data[scene]['widgets']['buttons'][button.id] = button.get_data_json_like()
 
-            ''' сохранение панелей '''
-            for panel_id in self.__data[scene]['widgets']['panels']:
-                panel = self.main.manager.widget_manager.get_widget(panel_id)
-                data[scene]['widgets']['panels'][panel.id] = panel.get_data_json_like()
+                ''' сохранение текстовых полей '''
+                for label_id in self.__data[scene]['widgets']['labels']:
+                    label = self.main.manager.widget_manager.get_widget(label_id)
+                    data[scene]['widgets']['labels'][label_id] = label.get_data_json_like()
 
-            self.__data[scene] = data[scene]
-        path = create_path()
-        with open(path, 'w', encoding="utf-8") as f:
-            json.dump(self.__data, f, indent=4)
+                ''' сохранение панелей '''
+                for panel_id in self.__data[scene]['widgets']['panels']:
+                    panel = self.main.manager.widget_manager.get_widget(panel_id)
+                    data[scene]['widgets']['panels'][panel.id] = panel.get_data_json_like()
 
-        log_info('creating json file: finish')
-        log_info('interface has saved')
+                self.__data[scene] = data[scene]
+            path = create_path()
+            with open(path, 'w', encoding="utf-8") as f:
+                json.dump(self.__data, f, indent=4)
+
+            log_info('creating json file: finish')
+            log_info('interface has saved')
 
     def trigger(self, msg, data):
         " принимает сырые данные и создает виджеты, затем создает событие со всеми созданными виджетами"
-        if msg == EventTypes.SCENEHASCHAMGED:
+        if msg == EventTypes.SCENEHASCHANGED:
             d = {
                 'widgets': [],
                 'panels': []

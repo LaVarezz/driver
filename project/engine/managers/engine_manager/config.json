@@ -17,14 +17,38 @@
                     "moveable": true,
                     "visible": true,
                     "enabled": true,
-                    "anchor": "CENTER",
+                    "anchor": "TOPCENTER",
                     "offset": [
                         0,
-                        0
+                        20
                     ]
                 }
             },
-            "labels": {}
+            "labels": {
+                "00004": {
+                    "position": [
+                        25,
+                        30
+                    ],
+                    "size": [
+                        350,
+                        100
+                    ],
+                    "text_pattern": "Suck SOME GACHI-DICK!",
+                    "panel": "00001",
+                    "layer": 1,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "BOTTOMCENTER",
+                    "text_anchor": "CENTER",
+                    "text_size": 1,
+                    "offset": [
+                        0,
+                        20
+                    ]
+                }
+            }
         }
     },
     "engine_scene": {
@@ -41,12 +65,15 @@
                     ],
                     "text": "Continue",
                     "command": {
-                        "action": "test_command",
-                        "data": [
-                            "manager",
-                            "engine_manager",
-                            "able_to_change"
-                        ]
+                        "action": "activate_function",
+                        "data": {
+                            "path": [
+                                "manager",
+                                "scene_manager",
+                                "change_scene"
+                            ],
+                            "args": "main_scene"
+                        }
                     },
                     "panel": "00001",
                     "layer": 0,
@@ -141,15 +168,15 @@
                         350,
                         100
                     ],
-                    "text_pattern": "Welcome to the Hell! %%[5]main|manager|window_manager|time%%",
+                    "text_pattern": "Welcome to the Hell!, %%main|manager|window_manager|time%%",
                     "panel": "00005",
                     "layer": 1,
                     "moveable": true,
                     "visible": true,
                     "enabled": true,
                     "anchor": "BOTTOMCENTER",
-                    "text_anchor": "",
-                    "text_size": 1,
+                    "text_anchor": "CENTER",
+                    "text_size": 2,
                     "offset": [
                         0,
                         20

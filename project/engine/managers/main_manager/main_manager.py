@@ -18,7 +18,7 @@ class MainManager():
         self.scene_manager = SceneManager(self.main)
         self.time_manager = TimeManager(self.main)
         self.widget_manager = WidgetManager(self.main)
-        self.text_manager = TextManager(self.main)
+        self.text_manager = TextManager()
         self.engine_manager = EngineManager(self.main)
         log_info('sub managers init: complete')
 

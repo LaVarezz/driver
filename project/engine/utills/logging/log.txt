@@ -1,17 +1,24 @@
-16:49:28 | INFO | game initialization: start
-16:49:28 | INFO | sub managers init: start
-16:49:28 | INFO | Window manager is being creating
-16:49:28 | INFO | Window manager has created
-16:49:28 | INFO | sub managers init: complete
-16:49:28 | INFO | sub managers setup: start
-16:49:28 | INFO | Window manager is on setup
-16:49:28 | INFO | Window manager setup if finish
-16:49:28 | INFO | scenes changing: start
-16:49:28 | INFO | scenes changing: finish
-16:49:28 | INFO | sub managers setup: complete
-16:49:28 | INFO | game initialization: finish
-16:49:28 | WARNING | –азмер окна (None, None) не позвол€ет вывести текст (Welcome to the Hell! ) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по х.
-16:49:28 | WARNING | –азмер окна (0, None) не позвол€ет вывести текст (Welcome to the Hell! ) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по y.
-16:49:28 | WARNING | –азмер окна (None, None) не позвол€ет вывести текст (0) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по х.
-16:49:28 | WARNING | –азмер окна (0, None) не позвол€ет вывести текст (0) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по y.
-16:49:28 | INFO | “екстовое поле с текстовыми объектами: [Text object with text: Welcome to the Hell! , [sublabel with value: 0, Text object with text: 0, '0']] успешно создана.
+22:18:55 | INFO | game initialization: start
+22:18:55 | INFO | sub managers init: start
+22:18:55 | INFO | Window manager is being creating
+22:18:55 | INFO | Window manager has created
+22:18:55 | INFO | sub managers init: complete
+22:18:55 | INFO | sub managers setup: start
+22:18:55 | INFO | Window manager is on setup
+22:18:55 | INFO | Window manager setup if finish
+22:18:55 | INFO | scenes changing: start
+22:18:55 | INFO | scenes changing: finish
+22:18:55 | INFO | sub managers setup: complete
+22:18:55 | INFO | game initialization: finish
+22:18:55 | WARNING | –азмер окна (None, None) не позвол€ет вывести текст (Welcome to the Hell!, ) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по х.
+22:18:55 | WARNING | –азмер окна (0, None) не позвол€ет вывести текст (Welcome to the Hell!, ) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по y.
+22:18:55 | WARNING | –азмер окна (None, None) не позвол€ет вывести текст (0) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по х.
+22:18:55 | WARNING | –азмер окна (0, None) не позвол€ет вывести текст (0) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по y.
+22:18:55 | INFO | “екстовое поле с текстовыми объектами: [Text object with text: Welcome to the Hell!, , [sublabel with value: 0, Text object with text: 0, '0']] успешно создана.
+22:18:58 | INFO | creating json file: start
+22:18:58 | INFO | creating json file: finish
+22:18:58 | INFO | interface has saved
+22:18:58 | INFO | creating json file: finish
+22:18:58 | INFO | interface has saved
+22:18:58 | INFO | game finish: start
+22:18:58 | INFO | game finish: done

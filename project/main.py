@@ -72,10 +72,14 @@ class Game(MainLike):
             val = getattr(parameter, data[-1])
             setattr(parameter, data[-1], False if val else True)
         elif msg == EventTypes.ACTIVATEFUNCTION:
+            ''' может вызывать функции с нулем аргументов, или со строкутурой аргументов'''
             func = self
-            for next_par in data:
+            for next_par in data['path']:
                 func = getattr(func, next_par)
-            func()
+            if data['args']:
+                func(data['args'])
+            else:
+                func()
 
     def get_parameter(self, path):
         parameter = self

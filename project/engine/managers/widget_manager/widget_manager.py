@@ -33,6 +33,7 @@ class WidgetManager(Manager):
 
         self.main.events.subscribe(self, EventTypes.BUTTONCHANGE)
         self.main.events.subscribe(self, EventTypes.SCENEOBJECTSCREATED)
+        self.main.events.subscribe(self, EventTypes.SCENEHASCHANGED)
 
     def update(self):
         ''' если нужно будет оптимизировать, то я буду держать список с пуллом и после каждого изменения состава виджетов этот список пересобирать '''
@@ -109,6 +110,21 @@ class WidgetManager(Manager):
         if msg == EventTypes.SCENEOBJECTSCREATED:
             for wid in data["widgets"]:
                 self.create_widget(wid)
+
+        if msg == EventTypes.SCENEHASCHANGED:
+            self.layers = {
+                0: {},
+                1: {},
+                2: {},
+                3: {},
+                4: {},
+                5: {},
+                6: {},
+            }
+            self.layers_int = 6
+
+            self.hovered_id = None
+            self.captured_id = None
 
     def __repr__(self):
         return 'widget_manager'

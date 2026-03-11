@@ -31,7 +31,7 @@ class Label(BasicWidget):
             вход: фиксированный text_pattern
             итог: заполняетя text_case, вызывается to_anchor
             примечания: sublabelом объект считается, если имеет хотя бы одну зависимость, т.е обращение "main" воспринимается как текст
-            пример входных данных: "Welcome to the Hell! %%[5]main|manager|window_manager|time%%"
+            пример входных данных: "Welcome to the Hell! %%main|manager|window_manager|time%%"
             '''
             lx = ly = 0
             dirty_converted = self.text_pattern.replace("%%", "^") # 1
