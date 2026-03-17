@@ -44,7 +44,7 @@ def is_num(num: str) -> {0, 1, 2}:
         return result
 
 
-test = True
+test = False
 if test:
     if not is_num('000'): print('Тест #1 пройден')
     if not is_num('-000'): print('Тест #2 пройден')

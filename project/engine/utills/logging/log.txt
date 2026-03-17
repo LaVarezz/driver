@@ -1,24 +1,29 @@
-22:18:55 | INFO | game initialization: start
-22:18:55 | INFO | sub managers init: start
-22:18:55 | INFO | Window manager is being creating
-22:18:55 | INFO | Window manager has created
-22:18:55 | INFO | sub managers init: complete
-22:18:55 | INFO | sub managers setup: start
-22:18:55 | INFO | Window manager is on setup
-22:18:55 | INFO | Window manager setup if finish
-22:18:55 | INFO | scenes changing: start
-22:18:55 | INFO | scenes changing: finish
-22:18:55 | INFO | sub managers setup: complete
-22:18:55 | INFO | game initialization: finish
-22:18:55 | WARNING | –азмер окна (None, None) не позвол€ет вывести текст (Welcome to the Hell!, ) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по х.
-22:18:55 | WARNING | –азмер окна (0, None) не позвол€ет вывести текст (Welcome to the Hell!, ) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по y.
-22:18:55 | WARNING | –азмер окна (None, None) не позвол€ет вывести текст (0) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по х.
-22:18:55 | WARNING | –азмер окна (0, None) не позвол€ет вывести текст (0) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по y.
-22:18:55 | INFO | “екстовое поле с текстовыми объектами: [Text object with text: Welcome to the Hell!, , [sublabel with value: 0, Text object with text: 0, '0']] успешно создана.
-22:18:58 | INFO | creating json file: start
-22:18:58 | INFO | creating json file: finish
-22:18:58 | INFO | interface has saved
-22:18:58 | INFO | creating json file: finish
-22:18:58 | INFO | interface has saved
-22:18:58 | INFO | game finish: start
-22:18:58 | INFO | game finish: done
+11:52:50 | INFO | game initialization: start
+11:52:50 | INFO | sub managers init: start
+11:52:50 | INFO | Window manager is being creating
+11:52:50 | INFO | Window manager has created
+11:52:50 | INFO | sub managers init: complete
+11:52:50 | INFO | sub managers setup: start
+11:52:50 | INFO | Window manager is on setup
+11:52:50 | INFO | Window manager setup if finish
+11:52:50 | INFO | scenes changing: start
+11:52:50 | INFO | scenes changing: finish
+11:52:50 | INFO | sub managers setup: complete
+11:52:50 | INFO | game initialization: finish
+11:52:50 | WARNING | –азмер окна (None, None) не позвол€ет вывести текст (Welcome to the Hell!, ) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по х.
+11:52:50 | WARNING | –азмер окна (0, None) не позвол€ет вывести текст (Welcome to the Hell!, ) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по y.
+11:52:50 | WARNING | –азмер окна (None, None) не позвол€ет вывести текст (0) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по х.
+11:52:50 | WARNING | –азмер окна (0, None) не позвол€ет вывести текст (0) в достаточном размере. ƒл€ вывода текста, размер окна будет автоматически увеличен по y.
+11:52:50 | INFO | “екстовое поле с текстовыми объектами: [Text object with text: Welcome to the Hell!, , [sublabel with value: 0, Text object with text: 0, '0']] успешно создана.
+11:52:51 | INFO | scenes changing: start
+11:52:51 | INFO | Battle map 10 x 10 has created
+11:52:51 | INFO | scenes changing: finish
+11:52:56 | INFO | creating json file: start
+11:52:56 | INFO | creating json file: finish
+11:52:56 | INFO | interface has saved
+11:52:56 | INFO | creating json file: finish
+11:52:56 | INFO | interface has saved
+11:52:56 | INFO | creating json file: finish
+11:52:56 | INFO | interface has saved
+11:52:56 | INFO | game finish: start
+11:52:56 | INFO | game finish: done

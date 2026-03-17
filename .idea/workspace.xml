@@ -4,20 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.5.4&#10;- Переписан принцип парсинга строки для label, добавлен пример. Искомое значение временно ограничено 2 знаками после запятой. Версия стабильна.">
-      <change afterPath="$PROJECT_DIR$/project/engine/scripts/check_num.py" afterDir="false" />
+    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.6&#10;- Очередное обновление для label: теперь значения, получаемые sublabel-ами по возможности переводятся в числа, а затем сокращающиеся. &#10;- Сцены теперь переключаются без проблем.&#10;АХТУНГ: есть костыль в сохранении конфига json.">
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/BattleScene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/map.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/tile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/scripts/utils/no_use_utils/tile_size_counter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/events/event_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/events/event_types.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/data/settings/game_settings/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/settings/game_settings/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/data/settings/open_settings/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/settings/open_settings/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/engine_manager/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/engine_manager/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/engine_manager/engine_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/engine_manager/engine_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/main_manager/main_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/main_manager/main_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scene_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scene_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/scenes.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/scenes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widget_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widget_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/label.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/label.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/sublabel.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/sublabel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/scripts/check_num.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/scripts/utils/no_use_utils/check_num.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,11 +96,11 @@
       <recent name="C:\Users\Galya\PycharmProjects\driver\main\sprites\grass" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Galya\PycharmProjects\driver\project\engine\scripts\utils\no_use_utils" />
       <recent name="C:\Users\Galya\PycharmProjects\driver" />
       <recent name="C:\Users\Galya\PycharmProjects\driver\main" />
       <recent name="C:\Users\Galya\PycharmProjects\driver\project\engine\managers" />
       <recent name="C:\Users\Galya\PycharmProjects\driver\project\data" />
-      <recent name="C:\Users\Galya\PycharmProjects\driver\project\engine\managers\scene_manager\scenes" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main (2)">
@@ -118,7 +117,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/engine/scripts/check_num.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Galya\PycharmProjects\driver\project\engine\scripts\utils\no_use_utils\check_num.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -343,7 +342,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772892005645</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="0.0.6&#10;- Очередное обновление для label: теперь значения, получаемые sublabel-ами по возможности переводятся в числа, а затем сокращающиеся. &#10;- Сцены теперь переключаются без проблем.&#10;АХТУНГ: есть костыль в сохранении конфига json.">
+      <option name="closed" value="true" />
+      <created>1773237761049</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1773237761049</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -357,7 +364,8 @@
     <MESSAGE value="0.0.5.2&#10;- label теперь корректно отображается" />
     <MESSAGE value="0.0.5.3&#10;- label поддерживает центрирование текста и автоматический подсчет размера sublabel's." />
     <MESSAGE value="0.0.5.4&#10;- Переписан принцип парсинга строки для label, добавлен пример. Искомое значение временно ограничено 2 знаками после запятой. Версия стабильна." />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.5.4&#10;- Переписан принцип парсинга строки для label, добавлен пример. Искомое значение временно ограничено 2 знаками после запятой. Версия стабильна." />
+    <MESSAGE value="0.0.6&#10;- Очередное обновление для label: теперь значения, получаемые sublabel-ами по возможности переводятся в числа, а затем сокращающиеся. &#10;- Сцены теперь переключаются без проблем.&#10;АХТУНГ: есть костыль в сохранении конфига json." />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.6&#10;- Очередное обновление для label: теперь значения, получаемые sublabel-ами по возможности переводятся в числа, а затем сокращающиеся. &#10;- Сцены теперь переключаются без проблем.&#10;АХТУНГ: есть костыль в сохранении конфига json." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

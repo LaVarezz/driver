@@ -1,4 +1,6 @@
 {
   "speed": 1,
-  "text_sizes": [12, 18, 24, 30, 60]
+  "text_sizes": [12, 18, 24, 30, 60],
+  "battle_map_size": [10, 10],
+  "battle_map_outpost": [300, 200]
 }

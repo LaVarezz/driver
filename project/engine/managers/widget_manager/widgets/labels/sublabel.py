@@ -1,5 +1,5 @@
 from project.data.protocols.protocols import MainLike
-from project.engine.scripts.check_num import is_num
+from project.engine.scripts.utils.no_use_utils.check_num import is_num
 
 
 class Sublabel:
