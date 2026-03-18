@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.7&#10;- Добавлена карта, боевая сцена, тайлы карты. Размер тайлов рассчитывается пока что некорректно(по y нет нижнего отступа)">
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/BattleScene.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/map.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/tile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/scripts/utils/no_use_utils/tile_size_counter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/data/settings/game_settings/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/settings/game_settings/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/data/settings/open_settings/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/settings/open_settings/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/engine_manager/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/engine_manager/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/scenes.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/scenes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/sublabel.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/sublabel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/scripts/check_num.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/scripts/utils/no_use_utils/check_num.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/data/protocols/protocols.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/protocols/protocols.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/input_manager/cursor.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/input_manager/cursor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/BattleScene.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/BattleScene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/battle_map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/tile.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/tile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widget_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widget_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/scripts/utils/no_use_utils/tile_size_counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/scripts/utils/no_use_utils/tile_size_counter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,32 +59,33 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.check_num.executor&quot;: &quot;Run&quot;,
-    &quot;Python.cursor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.engine_scene.executor&quot;: &quot;Run&quot;,
-    &quot;Python.event_bus.executor&quot;: &quot;Run&quot;,
-    &quot;Python.log.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (3).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (4).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_settings.executor&quot;: &quot;Run&quot;,
-    &quot;Python.protocols.executor&quot;: &quot;Run&quot;,
-    &quot;Python.settings_lib.executor&quot;: &quot;Run&quot;,
-    &quot;Python.text_manager.executor&quot;: &quot;Run&quot;,
-    &quot;Python.text_object.executor&quot;: &quot;Run&quot;,
-    &quot;Python.widget_manager.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Galya/PycharmProjects/driver/game_v2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.json.schema&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Main (1).executor": "Run",
+    "Python.Main.executor": "Run",
+    "Python.blit_blends.executor": "Run",
+    "Python.check_num.executor": "Run",
+    "Python.cursor.executor": "Run",
+    "Python.engine_scene.executor": "Run",
+    "Python.event_bus.executor": "Run",
+    "Python.log.executor": "Run",
+    "Python.main (1).executor": "Run",
+    "Python.main (2).executor": "Run",
+    "Python.main (3).executor": "Run",
+    "Python.main (4).executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main_settings.executor": "Run",
+    "Python.protocols.executor": "Run",
+    "Python.settings_lib.executor": "Run",
+    "Python.text_manager.executor": "Run",
+    "Python.text_object.executor": "Run",
+    "Python.widget_manager.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Galya/PycharmProjects/driver/game_v2",
+    "settings.editor.selected.configurable": "settings.json.schema"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Galya\PycharmProjects\driver\game_v2" />
@@ -104,6 +103,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main (2)">
+    <configuration name="blit_blends" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="driver" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.venv/Lib/site-packages/pygame/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/Lib/site-packages/pygame/examples/blit_blends.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="check_num" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="driver" />
       <option name="ENV_FILES" value="" />
@@ -170,28 +191,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="driver" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main (4)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="driver" />
       <option name="ENV_FILES" value="" />
@@ -239,10 +238,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.blit_blends" />
         <item itemvalue="Python.check_num" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main (4)" />
-        <item itemvalue="Python.main (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -358,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773737785040</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="0.0.7&#10;- Добавлена карта, боевая сцена, тайлы карты. Размер тайлов рассчитывается пока что некорректно(по y нет нижнего отступа)">
+      <option name="closed" value="true" />
+      <created>1773739318477</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1773739318477</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -383,6 +390,16 @@
           <url>file://$PROJECT_DIR$/project/engine/managers/engine_manager/engine_manager.py</url>
           <line>43</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/battle_map.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/battle_map.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

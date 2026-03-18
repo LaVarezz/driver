@@ -4,6 +4,6 @@ def count_tile_size(window_size: tuple|list, tiles:tuple|list, outpost: tuple|li
     x, y = tiles
 
     dx = (width-outpost[0]) // x
-    dy = height-outpost[1] // y
+    dy = (height-outpost[1]) // y
 
     return min(dx, dy)

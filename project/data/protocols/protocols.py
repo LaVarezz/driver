@@ -74,7 +74,7 @@ class CursorLike(Protocol):
 
     def check_matches(self): ...
 
-    def get_mouse_states(self) -> tuple: ...
+    def get_mouse_states(self) -> tuple[int, int, int|float]: ...
 
 class WindowManagerLike(ManagerLike, HasSetup, HasTrigger, Protocol):
     app: Any  # из pygame
@@ -133,6 +133,9 @@ class SettingsLike(Protocol):
     state_settings: dict
     game_settings: dict
 
+
+class BattleMapTileLike(Protocol):
+    content: Any
 
 class MainLike(Protocol):
     manager: MainManagerLike

@@ -1,4 +1,4 @@
-from project.data.protocols.protocols import MainLike
+from project.data.protocols.protocols import MainLike, WidgetLike
 from project.engine.events.event_types import EventTypes
 from project.engine.managers.basic_manager import Manager
 
@@ -38,8 +38,8 @@ class WidgetManager(Manager):
     def update(self):
         ''' если нужно будет оптимизировать, то я буду держать список с пуллом и после каждого изменения состава виджетов этот список пересобирать '''
         self.UI_run()
-        if self.captured_id:
-            widget = self.get_widget(self.captured_id)
+        #if self.captured_id:
+        #    widget = self.get_widget(self.captured_id)
         for layer in self.layers.values():
             for panel in layer.values():
                 panel.update()
@@ -60,11 +60,11 @@ class WidgetManager(Manager):
                 if id in panel.id_list:
                     return panel.id_list[id]
 
-    def get_all_widgets(self):
+    def get_all_panels(self):
         d = []
         for layer in self.layers.values():
-            for wid in layer.values():
-                d.append(wid)
+            for panel in layer.values():
+                d.append(panel)
         return d
 
     def create_widget(self, widget):
@@ -77,16 +77,15 @@ class WidgetManager(Manager):
         for layer in self.layers:
             for widget in self.layers[layer].values()[:]:
                 if widget.id == widget_id:
-                    del self.layers[layer][id]
+                    del self.layers[layer][widget.id]
                     # при ошибочном вызове создаст исключение
 
     def UI_run(self):
         ''' Switch hovered button's id '''
         CG = False  # click given
-        px, py, rel = self.main.cursor.get_mouse_states()
+        px, py = self.main.cursor.get_mouse_states()[:2]
         for layer in [self.layers[i] for i in range(self.layers_int, -1, -1)]:
             for widget in layer.values():
-
                 hovered_widget = widget.check_collide(px, py)
                 if hovered_widget:
                     CG = hovered_widget
@@ -95,6 +94,8 @@ class WidgetManager(Manager):
             if CG: break
         if not CG:
             self.hovered_id = None
+
+
 
     def trigger(self, msg, data):
         if msg == EventTypes.BUTTONCHANGE:

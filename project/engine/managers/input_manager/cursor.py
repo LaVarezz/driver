@@ -49,6 +49,6 @@ class Cursor(Manager):
             }
             self.main.events.emit(EventTypes.BUTTONCHANGE, data)
 
-    def get_mouse_states(self) -> tuple:
+    def get_mouse_states(self) -> tuple[int, int, int|float]:
         ''' получить положение мыши '''
         return (self.px, self.py, self.rel)

@@ -1,4 +1,4 @@
-from pygame import surface, rect
+from pygame import surface, rect, draw
 
 
 class BattleMapTile:
@@ -8,7 +8,6 @@ class BattleMapTile:
 
     def __init__(self, cords, tile_size, battle_map_outpost):
         self.content = None
-
 
         self._x, self._y = cords
         self._tile_size = tile_size
@@ -25,3 +24,7 @@ class BattleMapTile:
 
     def draw(self, window):
         window.blit(self._surface, self._rect)
+        draw.rect(window, 'blue', self._rect, width=3)
+
+    def __repr__(self):
+        return f"tile {self._x} x {self._y}"
