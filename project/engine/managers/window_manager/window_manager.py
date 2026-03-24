@@ -37,3 +37,5 @@ class WindowManager(Manager):
     def trigger(self, msg, data):
         if msg == EventTypes.TIMERSHUTDOWN:
             print('process...')
+            return True
+        return False

@@ -22,7 +22,7 @@ class Game(MainLike):
         self.manager = MainManager(self)
         self.events = EventBus()
 
-        self.events.subscribe(self, EventTypes.EXITGAMEEVENT)
+        self.events.subscribe(self, EventTypes.EXITGAMEEVENT, 0)
         self.events.subscribe(self, EventTypes.CHANGEFLAG)
         self.events.subscribe(self, EventTypes.ACTIVATEFUNCTION)
         self.settings = SettingsLib()
@@ -58,8 +58,6 @@ class Game(MainLike):
             self.manager.text_manager.draw_text_objects()
             self.manager.widget_manager.draw(self.manager.window_manager.app)
 
-
-
             ''' обновление экрана '''
             self.manager.window_manager.update_window()
 
@@ -67,12 +65,16 @@ class Game(MainLike):
         if msg == EventTypes.EXITGAMEEVENT:
             self.run = data['run']
             self.manager.engine_manager.save_config_to_json()
+            return True
+
         elif msg == EventTypes.CHANGEFLAG:
             parameter = self
             for next_par in data[:-1]:
                 parameter = getattr(parameter, next_par)
             val = getattr(parameter, data[-1])
             setattr(parameter, data[-1], False if val else True)
+            return True
+
         elif msg == EventTypes.ACTIVATEFUNCTION:
             ''' может вызывать функции с нулем аргументов, или со строкутурой аргументов '''
             func = self
@@ -82,7 +84,7 @@ class Game(MainLike):
                 func(data['args'])
             else:
                 func()
-
+        return False
 
     def get_parameter(self, path):
         parameter = self

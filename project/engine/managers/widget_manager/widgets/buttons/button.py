@@ -15,6 +15,7 @@ class Button(BasicWidget):
         self.main.manager.text_manager.create_text_object((0, 0), (self.width, self.height), self.surface, self.text, 1,
                                                           center=(1, 1))
 
+
     def __call__(self):
         if not self.main.manager.engine_manager.able_to_change:
             self.command(self.main, self.data)

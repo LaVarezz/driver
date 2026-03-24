@@ -93,7 +93,7 @@ class EngineManager(Manager):
                                                   panel['panel'],
                                                   panel["moveable"], panel["visible"], panel["enabled"],
                                                   panel['anchor'], panel['offset']))
-            self.main.events.fast_emit(EventTypes.SCENEOBJECTSCREATED, d)
+            self.main.events.push_emit(EventTypes.SCENEOBJECTSCREATED, d)
             ''' Label's serialize '''
             for label_id in widgets["labels"]:
                 label = widgets["labels"][label_id]
@@ -116,7 +116,8 @@ class EngineManager(Manager):
                                                                    button['offset']))
 
             self.main.events.emit(EventTypes.SCENEOBJECTSCREATED, d)
-
+            return True
+        return False
     def __getitem__(self, key):
         return self.__data[key]
 

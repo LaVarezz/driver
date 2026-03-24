@@ -8,3 +8,4 @@ class EventTypes(Enum):
     SCENEOBJECTSCREATED = "scene_objects_created"
     CHANGEFLAG = 'change_flag'
     ACTIVATEFUNCTION = 'activate_function'
+    CHANGESTATE = 'change_state'

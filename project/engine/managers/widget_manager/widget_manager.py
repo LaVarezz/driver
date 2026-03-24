@@ -38,12 +38,11 @@ class WidgetManager(Manager):
     def update(self):
         ''' если нужно будет оптимизировать, то я буду держать список с пуллом и после каждого изменения состава виджетов этот список пересобирать '''
         self.UI_run()
-        #if self.captured_id:
+        # if self.captured_id:
         #    widget = self.get_widget(self.captured_id)
         for layer in self.layers.values():
             for panel in layer.values():
                 panel.update()
-
 
     def draw(self, window):
         for layer in self.layers.values():
@@ -51,6 +50,7 @@ class WidgetManager(Manager):
                 panel.draw(window)
 
     def get_widget(self, id, layer=-1):
+        ''' Возвращает наведенный виджет (?) '''
         if layer >= 0:
             return self.layers[layer][id]
         for de_layer in self.layers.values():
@@ -95,11 +95,10 @@ class WidgetManager(Manager):
         if not CG:
             self.hovered_id = None
 
-
-
-    def trigger(self, msg, data):
+    def trigger(self, msg, data) -> bool:
         if msg == EventTypes.BUTTONCHANGE:
-            ''' изменяет выбранную и наведенную кнопку '''
+            '''   изменяет выбранную и наведенную кнопку
+             И ТРИГГЕРИТ ЕЕ!!!  '''
             but = data['buttons']
             if (0, 1) in but:
                 self.captured_id = self.hovered_id
@@ -108,9 +107,12 @@ class WidgetManager(Manager):
                     self.get_widget(self.captured_id).process()
                 self.captured_id = None
 
+            return True # Обработано, остановиться
+
         if msg == EventTypes.SCENEOBJECTSCREATED:
             for wid in data["widgets"]:
                 self.create_widget(wid)
+
 
         if msg == EventTypes.SCENEHASCHANGED:
             self.layers = {
@@ -126,6 +128,7 @@ class WidgetManager(Manager):
 
             self.hovered_id = None
             self.captured_id = None
+
 
     def __repr__(self):
         return 'widget_manager'

@@ -1,13 +1,18 @@
 from pygame import surface, rect, draw
 
+from project.engine.managers.widget_manager.widgets.buttons.button import Button
+
 
 class BattleMapTile:
     ''' Объект игровой клетки
     content - Obj | None - игровой объект, находящийся на клетке
+    button - связующее звено между ячейкой карты и курсором.
     '''
 
-    def __init__(self, cords, tile_size, battle_map_outpost):
+    def __init__(self, main,  cords, tile_size, battle_map_outpost):
         self.content = None
+        self.main = main
+
 
         self._x, self._y = cords
         self._tile_size = tile_size

@@ -1,4 +1,5 @@
 from project.engine.events.event_types import EventTypes
+from project.engine.utills.logging.log import log_warning
 
 
 class EventBus:
@@ -8,32 +9,43 @@ class EventBus:
         self._next_events = []
         self._subscribes = {}
 
-    def subscribe(self, listener, event_type):
+    def subscribe(self, listener, event_type, priority=1):
         ''' Защита от дурака '''
         if hasattr(listener, 'trigger'):
             if event_type not in self._subscribes.keys():
-                self._subscribes[event_type] = []
+                self._subscribes[event_type] = {}
             if listener not in self._subscribes[event_type]:
-                self._subscribes[event_type].append(listener)
+                ''' priority's logic '''
+                if priority not in self._subscribes[event_type]:
+                    self._subscribes[event_type][priority] = []
+
+                self._subscribes[event_type][priority].append(listener)
+
         else:
-            print('Слушатель не найден или у него отсутствует trigger')
+            log_warning('Слушатель не найден или у него отсутствует trigger')
 
     def unsubscribe(self, listener, event_type=None):
         if event_type and event_type in self._subscribes.keys():
-            if listener in self._subscribes[event_type]:
-                self._subscribes[event_type].remove(listener)
+            if listener in self._subscribes[event_type].values():
+
+                for priority in self._subscribes[event_type].keys():
+                    if self._subscribes[event_type][priority] == listener:
+                        self._subscribes[event_type][priority].remove(listener)
         else:
             for event in self._subscribes:
-                if listener in self._subscribes[event]:
-                    self._subscribes[event].remove(listener)
+                for priority in self._subscribes[event].keys():
+                    if self._subscribes[event][priority] == listener:
+                        self._subscribes[event][priority].remove(listener)
 
     def emit(self, msg, data):
         self._next_events.append((msg, data))
 
-    def fast_emit(self, msg, data):
+    def push_emit(self, msg, data):
         if msg in self._subscribes.keys():
-            for listener in self._subscribes[msg][:]:
-                listener.trigger(msg, data)
+            for priority in sorted(self._subscribes[msg].keys(), reverse=True):
+                for listener in self._subscribes[msg][priority]:
+                    if listener.trigger(msg, data):
+                        break
 
     def begin_frame(self):
         self._current_events, self._next_events = self._next_events, []
@@ -41,8 +53,11 @@ class EventBus:
     def process_frame(self):
         for event in self._current_events:
             if event[0] in self._subscribes.keys():
-                for listener in self._subscribes[event[0]][:]:
-                    listener.trigger(event[0], event[1])
+                for priority in sorted(self._subscribes[event[0]].keys(), reverse=True):
+                    for listener in self._subscribes[event[0]][priority][:]:
+                        if listener.trigger(event[0], event[1]):
+                            break
+
         self._current_events = []
 
     def current_events(self):
@@ -59,7 +74,6 @@ class EventBus:
 
     def next_len(self):
         return len(self._next_events)
-
 
 
 auto_test = False
