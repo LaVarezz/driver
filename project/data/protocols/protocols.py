@@ -46,7 +46,7 @@ class WidgetLike(Protocol):
 
 
 class EventBusLike(Protocol):
-    def subscribe(self, listener: HasTrigger, event_type: EnumLike, priority: int) -> None: ...
+    def subscribe(self, listener: any, event_type: EnumLike, priority: int=1) -> None: ...
 
     def unsubscribe(self, listener: HasTrigger, event_type: EnumLike | None = None) -> None: ...
 
@@ -126,6 +126,13 @@ class EngineManagerLike(ManagerLike):
 
     def save_config_for_scene(self): ...
 
+class CameraManagerLike(ManagerLike):
+    universal_size: int
+    zoom: int
+    outpost_x: int
+    outpost_y: int
+    def get_battle_map_configuration(self) -> dict: ...
+
 
 
 class SettingsLike(Protocol):
@@ -142,6 +149,7 @@ class MainLike(Protocol):
     settings: SettingsLike
     events: EventBusLike
     cursor: CursorLike
+    camera: CameraManagerLike
 
     def get_parameter(self, path) -> object: ...
 

@@ -9,3 +9,4 @@ class EventTypes(Enum):
     CHANGEFLAG = 'change_flag'
     ACTIVATEFUNCTION = 'activate_function'
     CHANGESTATE = 'change_state'
+    GETBATTLEMAPCONFIGURATION = 'get_battle_map_configuration'

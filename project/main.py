@@ -4,8 +4,9 @@ from project.data.protocols.protocols import MainLike
 from project.data.settings.settings_lib import SettingsLib
 from project.engine.events.event_bus import EventBus
 from project.engine.events.event_types import EventTypes
-from project.engine.managers.input_manager.cursor import Cursor
-from project.engine.managers.main_manager.main_manager import MainManager
+from project.engine.managers.UI_managers.camera_manager.camera_manager import Camera
+from project.engine.managers.game_managers.input_manager.cursor import Cursor
+from project.engine.managers.main_manager import MainManager
 from project.engine.utills.logging.log import setup_logging, log_info
 
 
@@ -27,6 +28,7 @@ class Game(MainLike):
         self.events.subscribe(self, EventTypes.ACTIVATEFUNCTION)
         self.settings = SettingsLib()
         self.cursor = Cursor(self)
+        self.camera = Camera(self)
 
         self.manager.create_submanagers()
         self.manager.setup_submanagers()

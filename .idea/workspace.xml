@@ -4,21 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.7.2&#10;- карта определяет наведенное поле&#10;- мелкие правки">
-      <change afterPath="$PROJECT_DIR$/project/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/events/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/engine/events/test_event_bus.py" afterDir="false" />
+    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.7.3&#10;- События получили порядок обработки.&#10;&#10;Ключевой момент перед оживанием интерфейса карты.">
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/camera_manager/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/camera_manager/camera_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/text_manager/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/buttons/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/buttons/commands/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/buttons/commands/cmds/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/labels/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/panel/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/input_manager/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/EngineScene/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/MainScene/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/map/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/time_manager/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/window_manager/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/support_managers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/support_managers/data_manager/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/support_managers/data_manager/data_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/support_managers/engine_manager/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/engine/objects/ships/basic_ship.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/data/protocols/protocols.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/protocols/protocols.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/events/event_bus.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/events/event_bus.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/events/event_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/events/event_types.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/engine_manager/engine_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/engine_manager/engine_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/battle_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/battle_map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/tile.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/tile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widget_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widget_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/button.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/window_manager/window_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/window_manager/window_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/data_manager/data_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/engine_manager/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/support_managers/engine_manager/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/engine_manager/engine_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/support_managers/engine_manager/engine_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/input_manager/cursor.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/input_manager/cursor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/input_manager/input_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/input_manager/input_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/main_manager/main_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/main_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scene_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scene_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/EngineScene/EngineScene.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/EngineScene/EngineScene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/MainScene/main_scene.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/MainScene/main_scene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/BattleScene.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/BattleScene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/battle_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/map/battle_map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/battle_scene/map/tile.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/map/tile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/scene_manager/scenes/scenes.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/scenes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/text_manager/text_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/text_manager/text_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/text_manager/text_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/text_manager/text_object.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/text_manager/word_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/text_manager/word_object.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/time_manager/time_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/time_manager/time_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/time_manager/timer.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/time_manager/timer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widget_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widget_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/basic_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/basic_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/buttons/button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/button_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/buttons/button_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/commands/cmds/activate_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/buttons/commands/cmds/activate_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/commands/cmds/set_flag.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/buttons/commands/cmds/set_flag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/commands/cmds/test_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/buttons/commands/cmds/test_command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/commands/command_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/buttons/commands/command_types.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/label.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/labels/label.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/labels/sublabel.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/labels/sublabel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/panel/panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/panel/panel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/widget_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/widget_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/widget_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/UI_managers/widget_manager/widgets/widget_types.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/window_manager/window_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/window_manager/window_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/main.py" afterDir="false" />
     </list>
@@ -101,11 +148,11 @@
       <recent name="C:\Users\Galya\PycharmProjects\driver\main\sprites\grass" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Galya\PycharmProjects\driver\project\engine\scripts\utils\no_use_utils" />
-      <recent name="C:\Users\Galya\PycharmProjects\driver" />
-      <recent name="C:\Users\Galya\PycharmProjects\driver\main" />
+      <recent name="C:\Users\Galya\PycharmProjects\driver\project\engine\managers\game_managers" />
+      <recent name="C:\Users\Galya\PycharmProjects\driver\project\engine\managers\support_managers" />
       <recent name="C:\Users\Galya\PycharmProjects\driver\project\engine\managers" />
-      <recent name="C:\Users\Galya\PycharmProjects\driver\project\data" />
+      <recent name="C:\Users\Galya\PycharmProjects\driver\project\engine\managers\UI_managers" />
+      <recent name="C:\Users\Galya\PycharmProjects\driver\project\engine\scripts\utils\no_use_utils" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main (2)">
@@ -379,7 +426,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773825191822</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="0.0.7.3&#10;- События получили порядок обработки.&#10;&#10;Ключевой момент перед оживанием интерфейса карты.">
+      <option name="closed" value="true" />
+      <created>1774375986171</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1774375986171</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -396,20 +451,21 @@
     <MESSAGE value="0.0.6&#10;- Очередное обновление для label: теперь значения, получаемые sublabel-ами по возможности переводятся в числа, а затем сокращающиеся. &#10;- Сцены теперь переключаются без проблем.&#10;АХТУНГ: есть костыль в сохранении конфига json." />
     <MESSAGE value="0.0.7&#10;- Добавлена карта, боевая сцена, тайлы карты. Размер тайлов рассчитывается пока что некорректно(по y нет нижнего отступа)" />
     <MESSAGE value="0.0.7.2&#10;- карта определяет наведенное поле&#10;- мелкие правки" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.7.2&#10;- карта определяет наведенное поле&#10;- мелкие правки" />
+    <MESSAGE value="0.0.7.3&#10;- События получили порядок обработки.&#10;&#10;Ключевой момент перед оживанием интерфейса карты." />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.7.3&#10;- События получили порядок обработки.&#10;&#10;Ключевой момент перед оживанием интерфейса карты." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/project/engine/managers/engine_manager/engine_manager.py</url>
+          <url>file://$PROJECT_DIR$/project/engine/managers/support_managers/engine_manager/engine_manager.py</url>
           <line>43</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/project/engine/managers/widget_manager/widgets/buttons/button.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/map/battle_map.py</url>
+          <line>84</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
