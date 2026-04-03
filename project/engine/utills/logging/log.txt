@@ -1,29 +1,24 @@
-16:47:07 | INFO | game initialization: start
-16:47:07 | INFO | Camera init: start
-16:47:07 | INFO | Camera init: finish
-16:47:07 | INFO | sub managers init: start
-16:47:07 | INFO | Window manager is being creating
-16:47:07 | INFO | Window manager has created
-16:47:07 | INFO | sub managers init: complete
-16:47:07 | INFO | sub managers setup: start
-16:47:07 | INFO | Window manager is on setup
-16:47:07 | INFO | Window manager setup if finish
-16:47:07 | INFO | scenes changing: start
-16:47:07 | INFO | scenes changing: finish
-16:47:07 | INFO | sub managers setup: complete
-16:47:07 | INFO | game initialization: finish
-16:47:07 | WARNING | Размер окна (None, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
-16:47:07 | WARNING | Размер окна (0, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
-16:47:07 | WARNING | Размер окна (None, None) не позволяет вывести текст (0) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
-16:47:07 | WARNING | Размер окна (0, None) не позволяет вывести текст (0) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
-16:47:07 | INFO | Текстовое поле с текстовыми объектами: [Text object with text: Welcome to the Hell!, , [sublabel with value: 0, Text object with text: 0, '0']] успешно создана.
-16:47:08 | INFO | scenes changing: start
-16:47:08 | INFO | Battle map 10 x 10 has created
-16:47:08 | INFO | scenes changing: finish
-16:47:09 | INFO | scenes changing: start
-16:47:09 | INFO | scenes changing: finish
-16:47:09 | WARNING | Размер окна (None, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
-16:47:09 | WARNING | Размер окна (0, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
-16:47:09 | WARNING | Размер окна (None, None) не позволяет вывести текст (1.82) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
-16:47:09 | WARNING | Размер окна (0, None) не позволяет вывести текст (1.82) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
-16:47:09 | INFO | Текстовое поле с текстовыми объектами: [Text object with text: Welcome to the Hell!, , [sublabel with value: 1.82, Text object with text: 1.82, '1.82']] успешно создана.
+18:10:24 | INFO | game initialization: start
+18:10:24 | INFO | Camera init: start
+18:10:24 | INFO | Camera init: finish
+18:10:24 | INFO | sub managers init: start
+18:10:24 | INFO | Window manager is being creating
+18:10:24 | INFO | Window manager has created
+18:10:24 | INFO | sub managers init: complete
+18:10:24 | INFO | sub managers setup: start
+18:10:24 | INFO | Window manager is on setup
+18:10:24 | INFO | Window manager setup if finish
+18:10:24 | INFO | scenes changing: start
+18:10:24 | INFO | scenes changing: finish
+18:10:24 | INFO | sub managers setup: complete
+18:10:24 | INFO | game initialization: finish
+18:10:24 | WARNING | Размер окна (None, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
+18:10:24 | WARNING | Размер окна (0, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
+18:10:24 | WARNING | Размер окна (None, None) не позволяет вывести текст (0) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
+18:10:24 | WARNING | Размер окна (0, None) не позволяет вывести текст (0) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
+18:10:24 | INFO | Текстовое поле с текстовыми объектами: [Text object with text: Welcome to the Hell!, , [sublabel with value: 0, Text object with text: 0, '0']] успешно создана.
+18:10:24 | INFO | scenes changing: start
+18:10:24 | INFO | Battle map create: start
+18:10:24 | INFO | Battle map 10 x 10 has created
+18:10:24 | INFO | Battle map create: finish
+18:10:24 | INFO | scenes changing: finish

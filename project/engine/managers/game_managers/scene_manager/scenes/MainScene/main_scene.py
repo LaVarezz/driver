@@ -2,6 +2,7 @@ class MainScene:
     def __init__(self, main):
         self.main = main
         self.name = "main_scene"
+
     def setup(self):
         pass
 

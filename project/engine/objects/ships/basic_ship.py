@@ -1,20 +1,16 @@
-from pygame import Surface, Rect
+from pygame import Surface
 
 
 class BasicShip:
-    def __init__(self, main, cords, tile_size):
+    def __init__(self, main, cords):
         self.main = main
-
         self.grid_x, self.grid_y = cords
 
-        self.tile_size = tile_size
-
-        self.surface = Surface((tile_size, tile_size))
-        self.rect = Rect()
-
+        self.rect = None
+        self.surface = None
 
     def update(self):
         pass
 
     def draw(self, window):
-        pass
+        window.blit(self.surface, self.rect)

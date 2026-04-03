@@ -18,6 +18,7 @@ class Camera(CameraManagerLike):
         log_info('Camera init: finish')
 
     def get_battle_map_configuration(self):
+        ''' Создает событие, которое пробегается по battle_map и собирает данные в data, сохраняет в self.container '''
         self.main.events.push_emit(EventTypes.GETBATTLEMAPCONFIGURATION, {})
         return self.container
 
