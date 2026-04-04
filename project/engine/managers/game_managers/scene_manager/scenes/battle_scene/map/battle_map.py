@@ -1,4 +1,4 @@
-from project.data.protocols.protocols import MainLike
+from project.data.protocols.protocols import MainLike, BattleMapTileLike
 from project.engine.events.event_types import EventTypes
 from project.engine.managers.game_managers.scene_manager.scenes.battle_scene.map.tile import BattleMapTile
 from project.engine.utills.logging.log import log_info
@@ -16,7 +16,7 @@ class BattleMap:
         x, y = map_size
 
         self.ox, self.oy = self.main.settings.game_settings["battle_map_outpost"]
-        self.tiles = [[[] for _ in range(y)] for _ in range(x)]
+        self.tiles = [[None for _ in range(y)] for _ in range(x)]
         self.tile_size = tile_size
 
         self.hovered = None
@@ -31,7 +31,8 @@ class BattleMap:
                                                    battle_map_outpost=battle_map_outpost)
         log_info(f'Battle map {x} x {y} has created')
 
-    def collide_tiles(self, cords=None) -> object:
+    def collide_tiles(self, cords=None) -> BattleMapTileLike | None:
+        ''' Алгоритм определяет наведенное поле и возвращает ссылку на поле или None, если мышь на поле не наведена. '''
         camera_x, camera_y = 0, 0  # Work piece
         tile_size = self.tile_size  # Work piece for the moment when tile size can be changed
         if not cords:
@@ -43,8 +44,8 @@ class BattleMap:
         new_x = x - self.ox//2
         new_y = y - self.oy//2
 
-        if 0 < new_x < map_size_x * tile_size + self.ox//2:
-            if 0 < new_y < map_size_y * tile_size + self.oy//2:
+        if 0 < new_x < map_size_x * tile_size:
+            if 0 < new_y < map_size_y * tile_size:
                 return self.tiles[new_x//tile_size][new_y//tile_size]
         return None
 

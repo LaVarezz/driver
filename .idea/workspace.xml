@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.7.5 &#10;- Добавлен модуль для создания объектов корабля&#10;- добавлена очередь хода&#10;- Корабль выводится на экран. (Синий квадрат)&#10;из багов: &#10;по какой-то причине смещена карта, из-за чего корабль отображается явно не там, где должен быть.">
+    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.7.5 b2&#10;Исправил баг версии 0.0.7.5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/data/settings/state_settings/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/settings/state_settings/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/game_managers/input_manager/cursor.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/input_manager/cursor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/data/protocols/protocols.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/protocols/protocols.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/map/battle_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/map/battle_map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/ship_controller/ship_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/ship_controller/ship_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/map/tile.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/map/tile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -393,7 +392,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775229176414</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="0.0.7.5 b2&#10;Исправил баг версии 0.0.7.5">
+      <option name="closed" value="true" />
+      <created>1775303429947</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1775303429947</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -413,7 +420,8 @@
     <MESSAGE value="0.0.7.3&#10;- События получили порядок обработки.&#10;&#10;Ключевой момент перед оживанием интерфейса карты." />
     <MESSAGE value="0.0.7.4 &#10;---Техническое&#10;- Camera отвечает за смещение объектов на экране.&#10;- Новое событие: GETBATTLEMAPCONFIGURATION возвращает все необходимые данные для рассчета координат на карте. &#10;- Заготовка под противников&#10;--- UI&#10;- Добавлен демо-спрайт противника 32х32." />
     <MESSAGE value="0.0.7.5 &#10;- Добавлен модуль для создания объектов корабля&#10;- добавлена очередь хода&#10;- Корабль выводится на экран. (Синий квадрат)&#10;из багов: &#10;по какой-то причине смещена карта, из-за чего корабль отображается явно не там, где должен быть." />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.7.5 &#10;- Добавлен модуль для создания объектов корабля&#10;- добавлена очередь хода&#10;- Корабль выводится на экран. (Синий квадрат)&#10;из багов: &#10;по какой-то причине смещена карта, из-за чего корабль отображается явно не там, где должен быть." />
+    <MESSAGE value="0.0.7.5 b2&#10;Исправил баг версии 0.0.7.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.7.5 b2&#10;Исправил баг версии 0.0.7.5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

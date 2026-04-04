@@ -1,7 +1,9 @@
 from pygame import surface, rect, draw
 
+from project.data.protocols.protocols import BattleMapTileLike
 
-class BattleMapTile:
+
+class BattleMapTile(BattleMapTileLike):
     ''' Объект игровой клетки
     content - Obj | None - игровой объект, находящийся на клетке
     button - связующее звено между ячейкой карты и курсором.

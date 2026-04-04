@@ -24,6 +24,9 @@ class SceneLike(Protocol):
 
 class EnumLike(Protocol): ...
 
+class BattleMapTileLike(Protocol):
+    content: Any
+
 
 class ManagerLike(HasSetup, Protocol): ...
 
