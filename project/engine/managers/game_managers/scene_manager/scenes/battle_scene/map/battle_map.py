@@ -34,23 +34,18 @@ class BattleMap:
     def collide_tiles(self, cords=None) -> object:
         camera_x, camera_y = 0, 0  # Work piece
         tile_size = self.tile_size  # Work piece for the moment when tile size can be changed
-        self.ox //= 2
-        self.oy //= 2
         if not cords:
             cords = self.main.cursor.get_mouse_states()[:2]
         x, y = cords
-
         map_size_x, map_size_y = self.main.settings.game_settings["battle_map_size"]
 
-        if self.ox < x < map_size_x * tile_size + self.ox:
-            if self.oy < y < map_size_y * tile_size + self.oy:
-                # here we are shore that the cursor is on the map
-                x -= self.ox
-                y -= self.oy
 
-                dx = x // tile_size
-                dy = y // tile_size
-                return self.tiles[dx][dy]
+        new_x = x - self.ox//2
+        new_y = y - self.oy//2
+
+        if 0 < new_x < map_size_x * tile_size + self.ox//2:
+            if 0 < new_y < map_size_y * tile_size + self.oy//2:
+                return self.tiles[new_x//tile_size][new_y//tile_size]
         return None
 
     def click_process(self, pos):

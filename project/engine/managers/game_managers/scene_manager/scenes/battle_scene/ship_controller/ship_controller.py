@@ -29,8 +29,8 @@ class ShipController:
         data = self.main.camera.get_battle_map_configuration()
         tile_size = self.battle_scene.tile_size
         x, y = cords
-        top = y * tile_size + data['map_outpost'][1]
-        left = x * tile_size + data['map_outpost'][0]
+        top = y * tile_size + data['map_outpost'][1]//2
+        left = x * tile_size + data['map_outpost'][0]//2
         ship.surface = Surface((tile_size, tile_size))
         ship.rect = Rect(left, top, tile_size, tile_size)
         ship.id = generate_id()

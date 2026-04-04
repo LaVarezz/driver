@@ -14,6 +14,7 @@ class Cursor(Manager):
         self.state = mouse.get_pressed()
         self.previous_state = self.state
         self.rel = (0, 0)
+        self.show_mouse_pos_var = self.main.settings.state_settings['show_mouse_pos']
 
     def update_cursor_state(self):
         ''' Обновляет положение '''
@@ -21,6 +22,7 @@ class Cursor(Manager):
         self.state = mouse.get_pressed()
         self.rel = mouse.get_rel()
         self.check_matches()
+        self.show_mouse_pos()
         self.previous_state = self.state
 
     def check_matches(self):
@@ -48,6 +50,11 @@ class Cursor(Manager):
                 'rel': self.rel
             }
             self.main.events.emit(EventTypes.BUTTONCHANGE, data)
+
+
+    def show_mouse_pos(self):
+        if self.show_mouse_pos_var:
+            print(self.px, self.py)
 
     def get_mouse_states(self) -> tuple[int, int, int|float]:
         ''' получить положение мыши '''
