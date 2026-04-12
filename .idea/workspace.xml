@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.7.5 b2&#10;Исправил баг версии 0.0.7.5">
+    <list default="true" id="09b29759-2935-48c8-baed-52e3dcbe880a" name="Changes" comment="0.0.7.5 b3&#10;Исправил возникший баг во втором билде. Теперь версия стабильна, критических багов неть">
+      <change afterPath="$PROJECT_DIR$/project/engine/managers/support_managers/console_manager/console_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/todo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/data/protocols/protocols.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/data/protocols/protocols.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/map/battle_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/map/battle_map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/map/tile.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/scene_manager/scenes/battle_scene/map/tile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/game_managers/window_manager/window_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/game_managers/window_manager/window_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/engine/managers/main_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/managers/main_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project/engine/utills/logging/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +63,7 @@
     "Python.Main.executor": "Run",
     "Python.blit_blends.executor": "Run",
     "Python.check_num.executor": "Run",
+    "Python.console_manager.executor": "Run",
     "Python.cursor.executor": "Run",
     "Python.engine_scene.executor": "Run",
     "Python.event_bus.executor": "Run",
@@ -142,6 +146,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="console_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="driver" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project/engine/managers/support_managers/console_manager" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/engine/managers/support_managers/console_manager/console_manager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="driver" />
       <option name="ENV_FILES" value="" />
@@ -186,28 +212,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (4)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="driver" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/game_v1" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/game_v1/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="driver" />
       <option name="ENV_FILES" value="" />
@@ -233,10 +237,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.console_manager" />
         <item itemvalue="Python.blit_blends" />
         <item itemvalue="Python.check_num" />
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.main (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -400,7 +404,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775303429947</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="0.0.7.5 b3&#10;Исправил возникший баг во втором билде. Теперь версия стабильна, критических багов неть">
+      <option name="closed" value="true" />
+      <created>1775304209060</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1775304209060</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -421,7 +433,8 @@
     <MESSAGE value="0.0.7.4 &#10;---Техническое&#10;- Camera отвечает за смещение объектов на экране.&#10;- Новое событие: GETBATTLEMAPCONFIGURATION возвращает все необходимые данные для рассчета координат на карте. &#10;- Заготовка под противников&#10;--- UI&#10;- Добавлен демо-спрайт противника 32х32." />
     <MESSAGE value="0.0.7.5 &#10;- Добавлен модуль для создания объектов корабля&#10;- добавлена очередь хода&#10;- Корабль выводится на экран. (Синий квадрат)&#10;из багов: &#10;по какой-то причине смещена карта, из-за чего корабль отображается явно не там, где должен быть." />
     <MESSAGE value="0.0.7.5 b2&#10;Исправил баг версии 0.0.7.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.7.5 b2&#10;Исправил баг версии 0.0.7.5" />
+    <MESSAGE value="0.0.7.5 b3&#10;Исправил возникший баг во втором билде. Теперь версия стабильна, критических багов неть" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.7.5 b3&#10;Исправил возникший баг во втором билде. Теперь версия стабильна, критических багов неть" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

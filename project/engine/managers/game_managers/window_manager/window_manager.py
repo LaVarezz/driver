@@ -22,10 +22,6 @@ class WindowManager(Manager):
         self.clock = pg.time.Clock()
         self.fps = data.open_settings['fps_limit']
         self.time = 0
-
-        d = {}
-        self.main.manager.time_manager.create_timer(self.time, 10, EventTypes.TIMERSHUTDOWN, d, True)
-        self.main.events.subscribe(self, EventTypes.TIMERSHUTDOWN)
         log_info('Window manager setup if finish')
 
     def update_window(self):
@@ -34,8 +30,3 @@ class WindowManager(Manager):
         self.clock.tick(self.main.settings.open_settings['fps_limit'])
         self.app.fill('black')
 
-    def trigger(self, msg, data):
-        if msg == EventTypes.TIMERSHUTDOWN:
-            print('process...')
-            return True
-        return False

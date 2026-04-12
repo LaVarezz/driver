@@ -45,10 +45,12 @@ class Game(MainLike):
             ''' Выполнение очереди событий '''
             self.events.process_frame()
 
+            ''' Обновление состояния курсора '''
             self.cursor.update_cursor_state()
 
             ''' сбор инпутов '''
             self.manager.input_manager.process_inputs()
+            self.manager.console_manager.update()
 
             ''' Обновление менеджеров '''
             self.manager.scene_manager.current_scene.update()
@@ -88,11 +90,23 @@ class Game(MainLike):
                 func()
         return False
 
-    def get_parameter(self, path):
-        parameter = self
-        for next_par in path[1:]:
-            parameter = getattr(parameter, next_par)
-        return parameter
+
+    def get_parameter(self, path, direct=False):
+        if not direct:
+            parameter = self if path[0] == 'main' else getattr(self, path[0])
+            for next_par in path[1:]:
+                parameter = getattr(parameter, next_par)
+            return parameter
+        else:
+            parameter = self if path[0] == 'main' else getattr(self, path[0])
+            for next_par in path[1:]:
+                parameter = getattr(parameter, next_par)
+            if not isinstance(parameter, str) and not isinstance(parameter, int) and not isinstance(parameter, float):
+                d = dir(parameter)
+                fields = [field for field in d if not callable(getattr(parameter, field))]
+                return fields
+            else:
+                return parameter
 
     def shutdown(self):
         log_info('game finish: start')

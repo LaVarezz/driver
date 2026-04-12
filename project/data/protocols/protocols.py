@@ -154,7 +154,7 @@ class MainLike(Protocol):
     cursor: CursorLike
     camera: CameraManagerLike
 
-    def get_parameter(self, path) -> object: ...
+    def get_parameter(self, path, direct) -> object: ...
 
 
 

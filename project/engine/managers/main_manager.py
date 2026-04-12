@@ -1,3 +1,4 @@
+from project.engine.managers.support_managers.console_manager.console_manager import ConsoleManager
 from project.engine.managers.support_managers.engine_manager.engine_manager import EngineManager
 from project.engine.managers.game_managers.input_manager.input_manager import InputManager
 from project.engine.managers.game_managers.scene_manager.scene_manager import SceneManager
@@ -20,6 +21,7 @@ class MainManager():
         self.widget_manager = WidgetManager(self.main)
         self.text_manager = TextManager()
         self.engine_manager = EngineManager(self.main)
+        self.console_manager = ConsoleManager(self.main)
         log_info('sub managers init: complete')
 
 
