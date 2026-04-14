@@ -28,7 +28,7 @@ class BattleMapTileLike(Protocol):
     content: Any
 
 
-class ManagerLike(HasSetup, Protocol): ...
+class ModuleLike(HasSetup, Protocol): ...
 
 
 class WidgetLike(Protocol):
@@ -79,7 +79,7 @@ class CursorLike(Protocol):
 
     def get_mouse_states(self) -> tuple[int, int, int|float]: ...
 
-class WindowManagerLike(ManagerLike, HasSetup, HasTrigger, Protocol):
+class WindowModuleLike(ModuleLike, HasSetup, HasTrigger, Protocol):
     app: Any  # из pygame
     clock: Any  # из pygame
     dt: float
@@ -89,22 +89,22 @@ class WindowManagerLike(ManagerLike, HasSetup, HasTrigger, Protocol):
     def update_window(self) -> None: ...
 
 
-class InputManagerLike(ManagerLike, HasSetup, Protocol):
+class InputModuleLike(ModuleLike, HasSetup, Protocol):
     def get_inputs(self) -> None: ...
 
 
-class SceneManagerLike(ManagerLike, Protocol):
+class SceneModuleLike(ModuleLike, Protocol):
     current_scene: SceneLike
 
     def change_scene(self, scene: SceneLike) -> None: ...
 
 
-class TimeManagerLike(ManagerLike, Protocol):
+class TimeModuleLike(ModuleLike, Protocol):
     def create_timer(self, start: int | float, duration: int | float, event: EnumLike, data: dict,
                      repeat: bool = False) -> None: ...
 
 
-class WidgetManagerLike(ManagerLike, Protocol):
+class WidgetModuleLike(ModuleLike, Protocol):
     captured_id: int
     hovered_id: int
 
@@ -116,12 +116,12 @@ class WidgetManagerLike(ManagerLike, Protocol):
 
     def get_all_widgets(self) -> list: ...
 
-class TextManagerLike(ManagerLike, Protocol):
+class TextModuleLike(ModuleLike, Protocol):
     def create_text_object(self, cords: tuple, length: tuple, window, text: str, size_index: int, outpost=10, delta=1,
                            center=(0, 0), static=True) -> object:...
     def remove_text_object(self, object): ...
 
-class EngineManagerLike(ManagerLike):
+class EngineModuleLike(ModuleLike):
     able_to_change: bool
     def setup(self, settings: SettingsLike): ...
 
@@ -129,7 +129,7 @@ class EngineManagerLike(ManagerLike):
 
     def save_config_for_scene(self): ...
 
-class CameraManagerLike(ManagerLike):
+class CameraModuleLike(ModuleLike):
     universal_size: int
     zoom: int
     outpost_x: int
@@ -148,21 +148,21 @@ class BattleMapTileLike(Protocol):
     content: Any
 
 class MainLike(Protocol):
-    manager: MainManagerLike
+    modules: MainModuleLike
     settings: SettingsLike
     events: EventBusLike
     cursor: CursorLike
-    camera: CameraManagerLike
+    camera: CameraModuleLike
 
     def get_parameter(self, path, direct) -> object: ...
 
 
 
-class MainManagerLike(ManagerLike, Protocol):
-    window_manager: WindowManagerLike
-    input_manager: InputManagerLike
-    scene_manager: SceneManagerLike
-    time_manager: TimeManagerLike
-    widget_manager: WidgetManagerLike
-    text_manager: TextManagerLike
-    engine_manager: EngineManagerLike
+class MainModuleLike(ModuleLike, Protocol):
+    window_module: WindowModuleLike
+    input_module: InputModuleLike
+    scene_module: SceneModuleLike
+    time_module: TimeModuleLike
+    widget_module: WidgetModuleLike
+    text_module: TextModuleLike
+    engine_module: EngineModuleLike

@@ -1,0 +1,331 @@
+{
+    "main_scene": {
+        "widgets": {
+            "buttons": {
+                "00002": {
+                    "position": [
+                        125,
+                        35
+                    ],
+                    "size": [
+                        150,
+                        30
+                    ],
+                    "text": "Continue",
+                    "command": {
+                        "action": "activate_function",
+                        "data": {
+                            "path": [
+                                "modules",
+                                "scene_module",
+                                "change_scene"
+                            ],
+                            "args": "battle_scene"
+                        }
+                    },
+                    "panel": "00001",
+                    "layer": 0,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "CENTER",
+                    "offset": [
+                        0,
+                        -100
+                    ]
+                },
+                "00003": {
+                    "position": [
+                        125,
+                        85
+                    ],
+                    "size": [
+                        150,
+                        30
+                    ],
+                    "text": "Settings",
+                    "command": {
+                        "action": "test_command",
+                        "data": [
+                            "modules",
+                            "engine_module",
+                            "able_to_change"
+                        ]
+                    },
+                    "panel": "00001",
+                    "layer": 0,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "CENTER",
+                    "offset": [
+                        0,
+                        -50
+                    ]
+                }
+            },
+            "panels": {
+                "00001": {
+                    "position": [
+                        100,
+                        300
+                    ],
+                    "size": [
+                        400,
+                        300
+                    ],
+                    "layer": 3,
+                    "panel": null,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "CENTER",
+                    "offset": [
+                        0,
+                        0
+                    ]
+                },
+                "00005": {
+                    "position": [
+                        100,
+                        20
+                    ],
+                    "size": [
+                        400,
+                        150
+                    ],
+                    "layer": 3,
+                    "panel": null,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "TOPCENTER",
+                    "offset": [
+                        0,
+                        20
+                    ]
+                }
+            },
+            "labels": {
+                "00004": {
+                    "position": [
+                        25,
+                        30
+                    ],
+                    "size": [
+                        350,
+                        100
+                    ],
+                    "text_pattern": "Welcome to the Hell!, %%main|modules|window_module|time%%",
+                    "panel": "00005",
+                    "layer": 1,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "BOTTOMCENTER",
+                    "text_anchor": "CENTER",
+                    "text_size": 2,
+                    "offset": [
+                        0,
+                        20
+                    ]
+                }
+            }
+        }
+    },
+    "battle_scene": {
+        "widgets": {
+            "buttons": {
+                "000BSB1": {
+                    "position": [
+                        125,
+                        35
+                    ],
+                    "size": [
+                        150,
+                        30
+                    ],
+                    "text": "Back",
+                    "command": {
+                        "action": "activate_function",
+                        "data": {
+                            "path": [
+                                "modules",
+                                "scene_module",
+                                "change_scene"
+                            ],
+                            "args": "main_scene"
+                        }
+                    },
+                    "panel": "000BSP1",
+                    "layer": 0,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "CENTER",
+                    "offset": [
+                        0,
+                        0
+                    ]
+                }
+            },
+            "panels": {
+                "000BSP1": {
+                    "position": [
+                        100,
+                        50
+                    ],
+                    "size": [
+                        100,
+                        50
+                    ],
+                    "layer": 1,
+                    "panel": null,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "",
+                    "offset": [
+                        0,
+                        0
+                    ]
+                }
+            },
+            "labels": {}
+        }
+    },
+    "engine_scene": {
+        "widgets": {
+            "buttons": {
+                "00002": {
+                    "position": [
+                        125,
+                        35
+                    ],
+                    "size": [
+                        150,
+                        30
+                    ],
+                    "text": "Continue",
+                    "command": {
+                        "action": "activate_function",
+                        "data": {
+                            "path": [
+                                "modules",
+                                "scene_module",
+                                "change_scene"
+                            ],
+                            "args": "main_scene"
+                        }
+                    },
+                    "panel": "00001",
+                    "layer": 0,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "CENTER",
+                    "offset": [
+                        0,
+                        -100
+                    ]
+                },
+                "00003": {
+                    "position": [
+                        125,
+                        85
+                    ],
+                    "size": [
+                        150,
+                        30
+                    ],
+                    "text": "Settings",
+                    "command": {
+                        "action": "test_command",
+                        "data": [
+                            "module",
+                            "engine_module",
+                            "able_to_change"
+                        ]
+                    },
+                    "panel": "00001",
+                    "layer": 0,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "CENTER",
+                    "offset": [
+                        0,
+                        -50
+                    ]
+                }
+            },
+            "panels": {
+                "00001": {
+                    "position": [
+                        100,
+                        300
+                    ],
+                    "size": [
+                        400,
+                        300
+                    ],
+                    "layer": 3,
+                    "panel": null,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "CENTER",
+                    "offset": [
+                        0,
+                        0
+                    ]
+                },
+                "00005": {
+                    "position": [
+                        100,
+                        20
+                    ],
+                    "size": [
+                        400,
+                        150
+                    ],
+                    "layer": 3,
+                    "panel": null,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "TOPCENTER",
+                    "offset": [
+                        0,
+                        20
+                    ]
+                }
+            },
+            "labels": {
+                "00004": {
+                    "position": [
+                        25,
+                        30
+                    ],
+                    "size": [
+                        350,
+                        100
+                    ],
+                    "text_pattern": "Welcome to the Hell!, %%main|modules|window_module|time%%",
+                    "panel": "00005",
+                    "layer": 1,
+                    "moveable": true,
+                    "visible": true,
+                    "enabled": true,
+                    "anchor": "BOTTOMCENTER",
+                    "text_anchor": "CENTER",
+                    "text_size": 2,
+                    "offset": [
+                        0,
+                        20
+                    ]
+                }
+            }
+        }
+    }
+}

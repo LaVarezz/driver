@@ -1,21 +1,54 @@
-14:46:44 | INFO | game initialization: start
-14:46:44 | INFO | Camera init: start
-14:46:44 | INFO | Camera init: finish
-14:46:44 | INFO | sub managers init: start
-14:46:44 | INFO | Window manager is being creating
-14:46:44 | INFO | Window manager has created
-14:46:44 | INFO | Console module connected
-14:46:44 | INFO | Console thread activated
-14:46:44 | INFO | sub managers init: complete
-14:46:44 | INFO | sub managers setup: start
-14:46:44 | INFO | Window manager is on setup
-14:46:44 | INFO | Window manager setup if finish
-14:46:44 | INFO | scenes changing: start
-14:46:44 | INFO | scenes changing: finish
-14:46:44 | INFO | sub managers setup: complete
-14:46:44 | INFO | game initialization: finish
-14:46:44 | WARNING | Размер окна (None, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
-14:46:44 | WARNING | Размер окна (0, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
-14:46:44 | WARNING | Размер окна (None, None) не позволяет вывести текст (0) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
-14:46:44 | WARNING | Размер окна (0, None) не позволяет вывести текст (0) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
-14:46:44 | INFO | Текстовое поле с текстовыми объектами: [Text object with text: Welcome to the Hell!, , [sublabel with value: 0, Text object with text: 0, '0']] успешно создана.
+15:11:11 | INFO | game initialization: start
+15:11:11 | INFO | Camera init: start
+15:11:11 | INFO | Camera init: finish
+15:11:11 | INFO | submodules init: start
+15:11:11 | INFO | Window modules is being creating
+15:11:11 | INFO | Window modules has created
+15:11:11 | INFO | Console module connected
+15:11:11 | INFO | Console thread activated
+15:11:11 | INFO | submodules init: complete
+15:11:11 | INFO | submodules setup: start
+15:11:11 | INFO | Window modules is on setup
+15:11:11 | INFO | Window modules setup if finish
+15:11:11 | INFO | scenes changing: start
+15:11:11 | INFO | scenes changing: finish
+15:11:11 | INFO | submodules setup: complete
+15:11:11 | INFO | game initialization: finish
+15:11:11 | WARNING | Размер окна (None, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
+15:11:11 | WARNING | Размер окна (0, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
+15:11:11 | WARNING | Размер окна (None, None) не позволяет вывести текст (0) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
+15:11:11 | WARNING | Размер окна (0, None) не позволяет вывести текст (0) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
+15:11:11 | INFO | Текстовое поле с текстовыми объектами: [Text object with text: Welcome to the Hell!, , [sublabel with value: 0, Text object with text: 0, '0']] успешно создана.
+15:11:12 | INFO | scenes changing: start
+15:11:12 | INFO | Battle map create: start
+15:11:12 | INFO | Battle map 10 x 10 has created
+15:11:12 | INFO | Battle map create: finish
+15:11:12 | INFO | scenes changing: finish
+15:11:13 | INFO | scenes changing: start
+15:11:13 | INFO | scenes changing: finish
+15:11:13 | WARNING | Размер окна (None, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
+15:11:13 | WARNING | Размер окна (0, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
+15:11:13 | WARNING | Размер окна (None, None) не позволяет вывести текст (2.19) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
+15:11:13 | WARNING | Размер окна (0, None) не позволяет вывести текст (2.19) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
+15:11:13 | INFO | Текстовое поле с текстовыми объектами: [Text object with text: Welcome to the Hell!, , [sublabel with value: 2.19, Text object with text: 2.19, '2.19']] успешно создана.
+15:11:15 | INFO | scenes changing: start
+15:11:15 | INFO | Battle map create: start
+15:11:15 | INFO | Battle map 10 x 10 has created
+15:11:15 | INFO | Battle map create: finish
+15:11:15 | INFO | scenes changing: finish
+15:11:16 | INFO | scenes changing: start
+15:11:16 | INFO | scenes changing: finish
+15:11:16 | WARNING | Размер окна (None, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
+15:11:16 | WARNING | Размер окна (0, None) не позволяет вывести текст (Welcome to the Hell!, ) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
+15:11:16 | WARNING | Размер окна (None, None) не позволяет вывести текст (4.83) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по х.
+15:11:16 | WARNING | Размер окна (0, None) не позволяет вывести текст (4.83) в достаточном размере. Для вывода текста, размер окна будет автоматически увеличен по y.
+15:11:16 | INFO | Текстовое поле с текстовыми объектами: [Text object with text: Welcome to the Hell!, , [sublabel with value: 4.83, Text object with text: 4.83, '4.83']] успешно создана.
+15:11:17 | INFO | creating json file: start
+15:11:17 | INFO | creating json file: finish
+15:11:17 | INFO | interface has saved
+15:11:17 | INFO | creating json file: finish
+15:11:17 | INFO | interface has saved
+15:11:17 | INFO | creating json file: finish
+15:11:17 | INFO | interface has saved
+15:11:17 | INFO | game finish: start
+15:11:17 | INFO | game finish: done

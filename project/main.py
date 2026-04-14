@@ -4,9 +4,9 @@ from project.data.protocols.protocols import MainLike
 from project.data.settings.settings_lib import SettingsLib
 from project.engine.events.event_bus import EventBus
 from project.engine.events.event_types import EventTypes
-from project.engine.managers.UI_managers.camera_manager.camera_manager import Camera
-from project.engine.managers.game_managers.input_manager.cursor import Cursor
-from project.engine.managers.main_manager import MainManager
+from project.engine.modules.UI_modules.camera_module.camera_module import Camera
+from project.engine.modules.game_modules.input_modules.cursor import Cursor
+from project.engine.modules.main_module import MainModule
 from project.engine.utills.logging.log import setup_logging, log_info
 
 
@@ -20,7 +20,7 @@ class Game(MainLike):
 
         self.run = True
 
-        self.manager = MainManager(self)
+        self.modules = MainModule(self)
         self.events = EventBus()
 
         self.events.subscribe(self, EventTypes.EXITGAMEEVENT, 0)
@@ -30,14 +30,14 @@ class Game(MainLike):
         self.cursor = Cursor(self)
         self.camera = Camera(self)
 
-        self.manager.create_submanagers()
-        self.manager.setup_submanagers()
+        self.modules.create_submodules()
+        self.modules.setup_submodules()
         log_info('game initialization: finish')
 
     def mainloop(self):
         while self.run:
             ''' Обновление таймеров '''
-            self.manager.time_manager.update(0.0083)
+            self.modules.time_module.update(0.0083)
 
             ''' Формирование очереди событий '''
             self.events.begin_frame()
@@ -49,26 +49,26 @@ class Game(MainLike):
             self.cursor.update_cursor_state()
 
             ''' сбор инпутов '''
-            self.manager.input_manager.process_inputs()
-            self.manager.console_manager.update()
+            self.modules.input_module.process_inputs()
+            self.modules.console_module.update()
 
             ''' Обновление менеджеров '''
-            self.manager.scene_manager.current_scene.update()
-            self.manager.widget_manager.update()
-            self.manager.text_manager.update_text_objects()
+            self.modules.scene_module.current_scene.update()
+            self.modules.widget_module.update()
+            self.modules.text_module.update_text_objects()
 
             ''' Отрисовка менеджеров '''
-            self.manager.scene_manager.current_scene.draw()
-            self.manager.text_manager.draw_text_objects()
-            self.manager.widget_manager.draw(self.manager.window_manager.app)
+            self.modules.scene_module.current_scene.draw()
+            self.modules.text_module.draw_text_objects()
+            self.modules.widget_module.draw(self.modules.window_module.app)
 
             ''' обновление экрана '''
-            self.manager.window_manager.update_window()
+            self.modules.window_module.update_window()
 
     def trigger(self, msg, data):
         if msg == EventTypes.EXITGAMEEVENT:
             self.run = data['run']
-            self.manager.engine_manager.save_config_to_json()
+            self.modules.engine_module.save_config_to_json()
             return True
 
         elif msg == EventTypes.CHANGEFLAG:
@@ -91,7 +91,7 @@ class Game(MainLike):
         return False
 
 
-    def get_parameter(self, path, direct=False):
+    def get_parameter(self, path, direct=False) -> object|int|float|str:
         if not direct:
             parameter = self if path[0] == 'main' else getattr(self, path[0])
             for next_par in path[1:]:
@@ -101,7 +101,7 @@ class Game(MainLike):
             parameter = self if path[0] == 'main' else getattr(self, path[0])
             for next_par in path[1:]:
                 parameter = getattr(parameter, next_par)
-            if not isinstance(parameter, str) and not isinstance(parameter, int) and not isinstance(parameter, float):
+            if not isinstance(parameter, str) and not isinstance(parameter, int) and not isinstance(parameter, float) and not isinstance(parameter, list) and not isinstance(parameter, tuple):
                 d = dir(parameter)
                 fields = [field for field in d if not callable(getattr(parameter, field))]
                 return fields
